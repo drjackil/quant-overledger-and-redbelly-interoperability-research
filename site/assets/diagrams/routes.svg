@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 372" role="img" aria-labelledby="rt-t rt-d" class="dg dg-routes">
+  <title id="rt-t">Three documented routes onto Overledger</title>
+  <desc id="rt-d">Route A, self-serve: POST /nodes, health check, network listed. Redbelly fits on paper but the category is Quant's call. Route B, managed engagement: contact Quant, connector configured, network supported. Needs Quant to choose it. Route C, Fusion Rollup: deploy OP Stack contracts, wire deposits and messages, become a base chain. No documented route.</desc>
+  <g class="dg-row" style="--i:0">
+    <rect class="dg-card dg-card-steel" x="24" y="16" width="180" height="96" rx="8"/>
+    <text class="dg-mono" x="40" y="44">ROUTE A</text><text class="dg-title-sm" x="40" y="70">Self-serve</text><text class="dg-text" x="40" y="92">Public EVM and 5 more</text>
+    <rect class="dg-card" x="228" y="16" width="170" height="96" rx="4"/><text class="dg-title-sm" x="244" y="56">POST /nodes</text><text class="dg-text" x="244" y="78">public or private node</text>
+    <rect class="dg-card" x="422" y="16" width="170" height="96" rx="4"/><text class="dg-title-sm" x="438" y="56">Health check</text><text class="dg-text" x="438" y="78">node and chain identity</text>
+    <rect class="dg-card" x="616" y="16" width="150" height="96" rx="4"/><text class="dg-title-sm" x="632" y="56">Network listed</text><text class="dg-text" x="632" y="78">for Overledger users</text>
+    <path class="dg-line dg-flow" d="M204 64 H 228 M398 64 H 422 M592 64 H 616"/>
+    <circle class="dg-dot-warn" cx="796" cy="52" r="6"/><text class="dg-mono" x="810" y="56">FITS ON PAPER</text><text class="dg-text" x="790" y="80">Category is Quant's call.</text><text class="dg-text" x="790" y="98">Untested.</text>
+  </g>
+  <g class="dg-row" style="--i:1">
+    <rect class="dg-card dg-card-steel" x="24" y="138" width="180" height="96" rx="8"/>
+    <text class="dg-mono" x="40" y="166">ROUTE B</text><text class="dg-title-sm" x="40" y="192">Engagement</text><text class="dg-text" x="40" y="214">Gated and consortium</text>
+    <rect class="dg-card" x="228" y="138" width="170" height="96" rx="4"/><text class="dg-title-sm" x="244" y="178">Contact Quant</text><text class="dg-text" x="244" y="200">describe network, use case</text>
+    <rect class="dg-card" x="422" y="138" width="170" height="96" rx="4"/><text class="dg-title-sm" x="438" y="178">Connector set up</text><text class="dg-text" x="438" y="200">with Quant's team</text>
+    <rect class="dg-card" x="616" y="138" width="150" height="96" rx="4"/><text class="dg-title-sm" x="632" y="178">Supported</text><text class="dg-text" x="632" y="200">with Quant support</text>
+    <path class="dg-line dg-flow" d="M204 186 H 228 M398 186 H 422 M592 186 H 616"/>
+    <circle class="dg-dot-unk" cx="796" cy="174" r="6"/><text class="dg-mono" x="810" y="178">QUANT DECIDES</text><text class="dg-text" x="790" y="202">Transport fits. Nothing</text><text class="dg-text" x="790" y="220">public says it is planned.</text>
+  </g>
+  <g class="dg-row" style="--i:2">
+    <rect class="dg-card dg-card-steel" x="24" y="260" width="180" height="96" rx="8"/>
+    <text class="dg-mono" x="40" y="288">ROUTE C</text><text class="dg-title-sm" x="40" y="314">Fusion Rollup</text><text class="dg-text" x="40" y="336">Become a base chain</text>
+    <rect class="dg-card" x="228" y="260" width="170" height="96" rx="4"/><text class="dg-title-sm" x="244" y="300">OP Stack contracts</text><text class="dg-text" x="244" y="322">deployed on the chain</text>
+    <rect class="dg-card" x="422" y="260" width="170" height="96" rx="4"/><text class="dg-title-sm" x="438" y="300">Wire the paths</text><text class="dg-text" x="438" y="322">deposit, message, withdraw</text>
+    <rect class="dg-card" x="616" y="260" width="150" height="96" rx="4"/><text class="dg-title-sm" x="632" y="300">Base chain</text><text class="dg-text" x="632" y="322">of the rollup</text>
+    <path class="dg-gap" d="M204 308 H 228 M398 308 H 422 M592 308 H 616"/>
+    <circle class="dg-dot-no" cx="796" cy="296" r="6"/><text class="dg-mono" x="810" y="300">NO PUBLIC ROUTE</text><text class="dg-text" x="790" y="324">A Quant-led project.</text><text class="dg-text" x="790" y="342">Steps not documented.</text>
+  </g>
+</svg>

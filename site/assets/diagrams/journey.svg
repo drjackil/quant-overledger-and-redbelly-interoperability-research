@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="jy-t jy-d" class="dg dg-journey">
+  <title id="jy-t">Where compliance checks run</title>
+  <desc id="jy-d">On Redbelly, a Receptor proof is checked by a verifier contract, Tokeniser rules are checked at every transfer, and only verified accounts can write. Once an asset is copied to another chain through a connection or bridge, that chain's own rules apply. Four break points: who may hold it, transfers out of Redbelly's sight, eligibility that goes stale, and coming back to an unverified address.</desc>
+  <rect class="dg-frame dg-frame-home" x="24" y="24" width="388" height="316" rx="8"/>
+  <text class="dg-mono" x="44" y="54">ON REDBELLY</text>
+  <g class="dg-step" style="--i:0"><rect class="dg-card" x="44" y="72" width="348" height="58" rx="4"/><circle class="dg-dot-ok" cx="64" cy="101" r="6"/>
+    <text class="dg-title-sm" x="80" y="97">Receptor proof checked</text><text class="dg-text" x="80" y="117">by a verifier contract on Redbelly</text></g>
+  <g class="dg-step" style="--i:1"><rect class="dg-card" x="44" y="142" width="348" height="58" rx="4"/><circle class="dg-dot-ok" cx="64" cy="171" r="6"/>
+    <text class="dg-title-sm" x="80" y="167">Tokeniser rules checked</text><text class="dg-text" x="80" y="187">at every transfer: KYC, AML, investor tests</text></g>
+  <g class="dg-step" style="--i:2"><rect class="dg-card" x="44" y="212" width="348" height="58" rx="4"/><circle class="dg-dot-ok" cx="64" cy="241" r="6"/>
+    <text class="dg-title-sm" x="80" y="237">Only verified accounts write</text><text class="dg-text" x="80" y="257">an accredited issuer vouches for each</text></g>
+  <text class="dg-text dg-strong" x="44" y="312">Safest pattern: keep the asset here,</text>
+  <text class="dg-text dg-strong" x="44" y="330">move instructions, not tokens.</text>
+  <path class="dg-line" d="M412 171 H 548"/>
+  <rect class="dg-card dg-card-steel" x="426" y="196" width="108" height="52" rx="4"/>
+  <text class="dg-mono" x="480" y="218" text-anchor="middle">BRIDGE OR</text><text class="dg-mono" x="480" y="236" text-anchor="middle">CONNECTION</text>
+  <g class="dg-token"><circle class="dg-token-c" cx="0" cy="0" r="11"/><text class="dg-token-t" x="0" y="4" text-anchor="middle">A</text></g>
+  <rect class="dg-frame dg-frame-away" x="548" y="24" width="388" height="316" rx="8"/>
+  <text class="dg-mono" x="568" y="54">ON ANOTHER CHAIN</text>
+  <text class="dg-text" x="568" y="80">That chain's own rules apply.</text>
+  <text class="dg-text" x="568" y="98">Redbelly's checks are not visible here.</text>
+  <g class="dg-break" style="--i:0"><circle class="dg-break-c" cx="584" cy="136" r="12"/><text class="dg-break-t" x="584" y="141" text-anchor="middle">1</text><text class="dg-title-sm" x="606" y="132">Who may hold it</text><text class="dg-text" x="606" y="150">a plain wrapped token lets anyone</text></g>
+  <g class="dg-break" style="--i:1"><circle class="dg-break-c" cx="584" cy="188" r="12"/><text class="dg-break-t" x="584" y="193" text-anchor="middle">2</text><text class="dg-title-sm" x="606" y="184">Transfers out of sight</text><text class="dg-text" x="606" y="202">secondary trades skip eligibility</text></g>
+  <g class="dg-break" style="--i:2"><circle class="dg-break-c" cx="584" cy="240" r="12"/><text class="dg-break-t" x="584" y="245" text-anchor="middle">3</text><text class="dg-title-sm" x="606" y="236">Eligibility goes stale</text><text class="dg-text" x="606" y="254">a revoked holder stays allowlisted</text></g>
+  <g class="dg-break" style="--i:3"><circle class="dg-break-c" cx="584" cy="292" r="12"/><text class="dg-break-t" x="584" y="297" text-anchor="middle">4</text><text class="dg-title-sm" x="606" y="288">Coming back</text><text class="dg-text" x="606" y="306">the recipient needs write access</text></g>
+  <text class="dg-cap" x="480" y="384" text-anchor="middle">ILLUSTRATIVE. BASED ON THE PUBLIC DOCUMENTATION CITED IN THIS REPORT.</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="st-t st-d" class="dg dg-stack">
+  <title id="st-t">How Overledger is put together</title>
+  <desc id="st-d">An institution calls the Overledger Gateway, which contains Connectors, Flow Apps with the Signer, and the Overledger Firewall. The Gateway also fronts Fusion Rollup. Connectors reach EVM chains, other self-serve families and engagement networks. Fusion reaches its base chains. Redbelly is shown with a dashed link because it is not a listed network.</desc>
+  <rect class="dg-card dg-card-steel" x="300" y="12" width="360" height="54" rx="8"/>
+  <text class="dg-title" x="480" y="45" text-anchor="middle">Institution, AI agent or service</text>
+  <path class="dg-line dg-flow" d="M480 66 V 104"/>
+  <rect class="dg-frame" x="24" y="104" width="620" height="176" rx="8"/>
+  <text class="dg-mono" x="44" y="132">OVERLEDGER GATEWAY</text>
+  <text class="dg-text" x="44" y="152">One login and one API. Authenticates, routes, runs workflows.</text>
+  <g class="dg-step" style="--i:0"><rect class="dg-card" x="44" y="168" width="184" height="92" rx="4"/>
+    <text class="dg-title-sm" x="60" y="196">Connectors</text><text class="dg-text" x="60" y="218">One adapter per</text><text class="dg-text" x="60" y="236">chain family</text></g>
+  <g class="dg-step" style="--i:1"><rect class="dg-card" x="242" y="168" width="184" height="92" rx="4"/>
+    <text class="dg-title-sm" x="258" y="196">Flow Apps + Signer</text><text class="dg-text" x="258" y="218">Prepare, sign,</text><text class="dg-text" x="258" y="236">execute workflows</text></g>
+  <g class="dg-step" style="--i:2"><rect class="dg-card" x="440" y="168" width="184" height="92" rx="4"/>
+    <text class="dg-title-sm" x="456" y="196">Firewall</text><text class="dg-text" x="456" y="218">Who may reach</text><text class="dg-text" x="456" y="236">which network</text></g>
+  <g class="dg-step" style="--i:3"><rect class="dg-card dg-card-steel" x="680" y="104" width="256" height="176" rx="8"/>
+    <text class="dg-mono" x="700" y="132">FUSION ROLLUP</text><text class="dg-title-sm" x="700" y="164">Multi-ledger rollup</text>
+    <text class="dg-text" x="700" y="190">Built on the OP Stack.</text><text class="dg-text" x="700" y="210">Anchors to several</text><text class="dg-text" x="700" y="230">base chains at once.</text></g>
+  <path class="dg-line" d="M644 192 H 680"/>
+  <path class="dg-line dg-flow" d="M136 260 C 136 330, 306 340, 306 392"/>
+  <path class="dg-line dg-flow" d="M136 260 C 136 330, 490 340, 490 392"/>
+  <path class="dg-line dg-flow" d="M136 260 C 136 330, 674 340, 674 392"/>
+  <path class="dg-line dg-flow" d="M808 280 V 392"/>
+  <path class="dg-gap" d="M136 260 C 136 320, 112 340, 112 392"/>
+  <g class="dg-q"><circle class="dg-q-ring" cx="122" cy="330" r="13"/><text class="dg-q-text" x="122" y="335" text-anchor="middle">?</text></g>
+  <g class="dg-step" style="--i:4"><rect class="dg-card dg-card-gap" x="26" y="392" width="172" height="62" rx="4"/>
+    <text class="dg-title-sm" x="40" y="418">Redbelly</text><text class="dg-mono dg-brand-text" x="40" y="440">NOT LISTED</text></g>
+  <g class="dg-step" style="--i:5"><rect class="dg-card" x="210" y="392" width="172" height="62" rx="4"/>
+    <text class="dg-title-sm" x="224" y="418">EVM chains</text><text class="dg-mono" x="224" y="440">SELF-SERVE</text></g>
+  <g class="dg-step" style="--i:6"><rect class="dg-card" x="394" y="392" width="172" height="62" rx="4"/>
+    <text class="dg-title-sm" x="408" y="418">Solana, Cosmos, SUI,</text><text class="dg-mono" x="408" y="440">HEDERA, APTOS</text></g>
+  <g class="dg-step" style="--i:7"><rect class="dg-card" x="578" y="392" width="172" height="62" rx="4"/>
+    <text class="dg-title-sm" x="592" y="418">Fabric, Corda, Canton</text><text class="dg-mono" x="592" y="440">ENGAGEMENT</text></g>
+  <g class="dg-step" style="--i:8"><rect class="dg-card" x="762" y="392" width="172" height="62" rx="4"/>
+    <text class="dg-title-sm" x="776" y="418">Sepolia, Amoy, Besu</text><text class="dg-mono" x="776" y="440">FUSION BASE CHAINS</text></g>
+</svg>
