@@ -1,0 +1,25 @@
+{
+  "name": "quant-overledger-and-redbelly-interoperability-research",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Feasibility research: could Redbelly Network connect to Quant's Overledger, what would it take, and what could it offer institutions. Redbelly DAO Community Task Board, TASK-29.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/render.mjs",
+    "build:site": "node scripts/build.mjs",
+    "lint": "node scripts/lint-content.mjs",
+    "verify:sources": "node scripts/verify-sources.mjs",
+    "probe": "node scripts/probe.mjs",
+    "test": "node scripts/lint-content.mjs && node scripts/test-site.mjs",
+    "test:online": "node scripts/verify-sources.mjs && node scripts/probe.mjs --check",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "docx": "9.0.2",
+    "ethers": "6.13.4",
+    "marked": "14.1.3",
+    "playwright": "1.63.0"
+  }
+}

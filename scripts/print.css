@@ -1,0 +1,59 @@
+/* Print layout for the PDF. Light theme of the DAO brand, A4, no motion. */
+@page { size: A4; margin: 20mm 18mm 20mm 18mm; }
+@page :first { margin: 0; }
+html, body { background: #fff !important; }
+body { font-size: 10.5pt; line-height: 1.5; color: #0F1A22; overflow: visible; }
+.dg *, .dg { animation: none !important; transition: none !important; opacity: 1 !important; transform: none; }
+.dg .dg-token { transform: translate(480px, 171px) !important; }
+a { color: #B3272A; text-decoration: none; }
+
+.cover { height: 297mm; padding: 28mm 22mm 22mm; background: #1d3140; color: #f1f5f8; display: flex; flex-direction: column; break-after: page; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.cover-logo { height: 28mm; width: auto; align-self: flex-start; margin-bottom: 26mm; }
+.cover .eyebrow { color: #ffb3ae; font-size: 9pt; }
+.cover h1 { font-size: 34pt; line-height: 1.1; letter-spacing: -0.02em; margin: 4mm 0 6mm; color: #fff; }
+.cover-sub { font-size: 14pt; line-height: 1.45; color: #c2ced6; max-width: 150mm; margin: 0 0 12mm; }
+.cover-notice { border-left: 3px solid #EF5350; background: #141f26; padding: 5mm 6mm; font-size: 10.5pt; line-height: 1.5; border-radius: 0 4px 4px 0; max-width: 160mm; }
+.cover-meta { margin: auto 0 8mm; display: grid; grid-template-columns: repeat(2, 1fr); gap: 5mm 10mm; }
+.cover-meta dt { font-family: var(--font-mono); font-size: 8pt; letter-spacing: 0.1em; text-transform: uppercase; color: #8fa1ad; }
+.cover-meta dd { margin: 1mm 0 0; font-size: 11pt; color: #f1f5f8; }
+.legend { display: flex; gap: 8mm; font-family: var(--font-mono); font-size: 8.5pt; letter-spacing: 0.08em; text-transform: uppercase; }
+.lg::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+.lg-c::before { background: #86EFAC; } .lg-a::before { background: #ffb3ae; } .lg-u::before { background: #FCD34D; }
+
+.contents { break-after: page; padding-top: 4mm; }
+.contents-h { font-size: 20pt; margin: 0 0 8mm; }
+.contents ol { list-style: none; padding: 0; margin: 0; }
+.contents li { border-bottom: 1px solid #DAE1E7; }
+.contents a { display: block; padding: 3mm 0; color: #0F1A22; font-size: 11pt; }
+.contents a span { font-family: var(--font-mono); color: #B3272A; font-weight: 600; margin-right: 4mm; }
+
+.print-body h2 { font-size: 17pt; line-height: 1.25; margin: 0 0 4mm; padding-top: 2mm; break-before: page; break-after: avoid; }
+.print-body h2 .num { font-family: var(--font-mono); font-size: 11pt; color: #B3272A; margin-right: 2mm; }
+.print-body h3 { font-size: 12.5pt; margin: 7mm 0 2.5mm; break-after: avoid; }
+.print-body p, .print-body li { orphans: 3; widows: 3; }
+.print-body ul, .print-body ol { padding-left: 5mm; }
+.print-body li { margin: 1.2mm 0; }
+
+.panel { margin: 4mm 0; padding: 3.5mm 4.5mm 1mm; background: #F4F6F8; border: 1px solid #D3DBE1; border-left-width: 3px; border-radius: 6px; break-inside: auto; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.panel-label { font-size: 8pt; margin-bottom: 2mm; }
+.panel-confirmed, .panel-live { border-left-color: #15803D; } .panel-confirmed .panel-label, .panel-live .panel-label { color: #15803D; } .panel-confirmed .dot, .panel-live .dot { background: #15803D; }
+.panel-analysis { border-left-color: #B3272A; } .panel-analysis .panel-label { color: #B3272A; } .panel-analysis .dot { background: #B3272A; }
+.panel-unknown { border-left-color: #A16207; } .panel-unknown .panel-label { color: #A16207; } .panel-unknown .dot { background: #A16207; }
+.panel-notice { border-left-color: #EF5350; background: #E6EBEF; } .panel-notice .panel-label { color: #B3272A; } .panel-notice .dot { background: #EF5350; }
+
+.cite { font-size: 7pt; padding: 1px 3px; vertical-align: 1px; color: #B3272A; background: #fff; border-color: #C3CDD4; }
+.table-wrap { overflow: visible; border-radius: 6px; margin: 3mm 0 4mm; background: #fff; break-inside: auto; }
+table { font-size: 8.8pt; }
+th { font-size: 7.2pt; padding: 2mm 2.5mm; white-space: normal; background: #E6EBEF; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+td { padding: 2mm 2.5mm; min-width: 0; }
+tr { break-inside: avoid; }
+.status { font-size: 8pt; }
+code { font-size: 8.5pt; background: #F4F6F8; border-color: #DAE1E7; }
+
+figure.diagram { margin: 5mm 0; padding: 4mm; background: #fff; border: 1px solid #D3DBE1; break-inside: avoid; }
+figure.diagram figcaption { font-size: 8.5pt; color: #596975; margin-top: 2mm; }
+
+.srclist { list-style: none; padding: 0; margin: 0 0 4mm; }
+.srclist li { padding: 2mm 0; border-bottom: 1px solid #E6EBEF; font-size: 9pt; break-inside: avoid; overflow-wrap: anywhere; }
+.srclist b { font-family: var(--font-mono); color: #B3272A; margin-right: 1.5mm; }
+.srclist .supports { color: #394853; }

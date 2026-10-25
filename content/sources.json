@@ -1,0 +1,610 @@
+{
+  "accessed": "2026-10-25",
+  "note": "Every quote below is checked against the live page by scripts/verify-sources.mjs. Quotes are matched after collapsing whitespace and straightening curly quotes.",
+  "groups": [
+    { "id": "tch", "title": "The Clearing House and Quant announcements" },
+    { "id": "overledger", "title": "Quant Overledger documentation and API reference" },
+    { "id": "redbelly", "title": "Redbelly Network documentation" },
+    { "id": "tokeniser", "title": "Tokeniser" },
+    { "id": "bridges", "title": "Existing bridges and wrapped RBNT" },
+    { "id": "dao", "title": "Redbelly DAO community work" },
+    { "id": "live", "title": "Live checks run for this report" }
+  ],
+  "sources": [
+    {
+      "id": "S01", "group": "tch",
+      "title": "The Clearing House Partners with Quant to Advance the On-Chain Money Initiative",
+      "publisher": "The Clearing House", "date": "2026-09-24",
+      "url": "https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative",
+      "supports": "TCH selected Quant to power the On-Chain Money Initiative; Quant's technology provides the interoperability, orchestration and transaction-management layer with connectivity to RTP and CHIPS; expected in the first half of 2027.",
+      "quotes": [
+        "announced the selection of Quant",
+        "to power its On-Chain Money Initiative, a new interoperable payments network that will enable financial institutions of all sizes to clear and settle tokenized deposit transactions",
+        "Quant's technology will enable the network's interoperability, orchestration, and transaction-management layer",
+        "including the RTP® and CHIPS® networks",
+        "Announced in June",
+        "expected to become available to participating institutions in the first half of 2027"
+      ]
+    },
+    {
+      "id": "S02", "group": "tch",
+      "title": "The Clearing House Partners with Quant to Advance the On-Chain Money Initiative (Quant press release)",
+      "publisher": "Quant", "date": "2026-09-24",
+      "url": "https://quant.network/press-releases/the-clearing-house-partners-with-quant-to-advance-the-on-chain-money-initiative/",
+      "supports": "Quant's own release of the same announcement, with the same description of its role and timing.",
+      "quotes": [
+        "The Clearing House will use Quant's technology to bring on-chain capabilities to its tokenised deposit clearing and settlement network for financial institutions.",
+        "interoperability, orchestration, and transaction-management layer",
+        "first half of 2027"
+      ]
+    },
+    {
+      "id": "S03", "group": "tch",
+      "title": "Quant powers The Clearing House's On-Chain Money Initiative in the US",
+      "publisher": "Quant", "date": "2026-09-24",
+      "url": "https://quant.network/news/quant-powers-the-clearing-houses-on-chain-money-initiative-in-the-us/",
+      "supports": "Selection followed a competitive process; Quant will also offer Tokenised Deposits-as-a-Service to US institutions that process through TCH but lack tokenised deposit capability.",
+      "quotes": [
+        "Following a competitive process, it has selected Quant to power its On-Chain Money Initiative",
+        "Quant will serve as the commercial solution for bank-side tokenised deposits for any US financial institution that processes through The Clearing House but does not yet have tokenised deposit capability",
+        "Today, tokenised deposits mostly live in walled gardens"
+      ]
+    },
+    {
+      "id": "S04", "group": "tch",
+      "title": "Major Financial Institutions Unveil Bank-Led On-Chain Money Initiative",
+      "publisher": "The Clearing House", "date": "2026-06-05",
+      "url": "https://www.theclearinghouse.org/payment-systems/Articles/2026/06/Major-Financial-Institutions-Unveil-Bank-Led-On-Chain-Money-Initiative",
+      "supports": "The initiative was unveiled in June 2026 by a group of banks; it is operated by TCH and includes a connectivity layer to fiat rails.",
+      "quotes": [
+        "June 05, 2026",
+        "will be operated by The Clearing House",
+        "a connectivity layer linking blockchain-based activity with established fiat rails, such as the RTP® and CHIPS® networks"
+      ]
+    },
+    {
+      "id": "S05", "group": "overledger",
+      "title": "Start Here (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/start-here",
+      "supports": "Overledger is Quant's multi-DLT platform with one set of credentials and one API surface; Flow Applications include steps such as a compliance check; customers and partners can host their own Flow Apps.",
+      "quotes": [
+        "Overledger is Quant's multi-DLT platform for building applications that span more than one blockchain, one set of credentials, one API surface, one execution environment that connects to many DLT networks.",
+        "Flow Applications turn multi-step business logic (signing, smart-contract deployment, compliance check, payment, …) into typed sessions",
+        "customers and partners can host their own Flow Applications externally and register them with the Gateway"
+      ]
+    },
+    {
+      "id": "S06", "group": "overledger",
+      "title": "Overview (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/overview",
+      "supports": "Overledger's three foundations (Gateway, Connectors, Fusion Rollup); network categories; glossary definition of a public permissioned network; Fusion Firewall policies mirrored on each connected L1.",
+      "quotes": [
+        "A Gateway that authenticates clients, routes requests, and orchestrates higher-level workflows.",
+        "A set of Connectors that abstract individual DLT RPC protocols behind a common interface.",
+        "public networks (Ethereum, Polygon, Solana, …), public permissioned networks (consortium chains with public read access), and private permissioned networks (consortium chains)",
+        "\"public permissioned\" means anyone can read but only allowlisted parties can write",
+        "Each Connector integrates with a pool of nodes for its DLT family: Quant-operated nodes that ship by default, plus customer-attached nodes that your account can register",
+        "The policies of the Fusion Firewall are mirrored on-chain inside the rollup and on each connected L1."
+      ]
+    },
+    {
+      "id": "S07", "group": "overledger",
+      "title": "Connectors (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/connectors",
+      "supports": "Self-serve versus managed engagement; six self-serve families; the three self-serve eligibility tests; POST /nodes adds a new network in a supported family; public and private nodes; approved provider domains; engagement for operator-gated chains; new-family effort; node selection; blocked admin methods; network visibility model; live list from GET /networks.",
+      "quotes": [
+        "Self-serve Connectors for public, permissionless DLT families.",
+        "Six DLT families are available for self-serve onboarding today",
+        "Covers every EVM-compatible chain (Ethereum, Polygon, Arbitrum, Avalanche, …).",
+        "A DLT family is considered eligible for self-serve if (a) its nodes expose RPC or REST over HTTPS, (b) the RPC requires no security factor beyond an API key, and (c) node identity does not matter to other tenants",
+        "The first POST /nodes call registers both the network and your node for it. This new network will then be available for Overledger users.",
+        "If public is selected then the user can only add nodes from whitelisted providers. If private is selected then the user can add nodes from any domain.",
+        "alchemy.com, infura.io, quiknode.pro, chainstack.com, getblock.io, blockdaemon.com, ankr.com",
+        "Required, embedded in the URL path (the Gateway forwards the URL as-is), not a header.",
+        "Health check at registration",
+        "typically permissioned DLTs used by regulated consortia and operator-gated public chains",
+        "if your DLT exposes RPC (or a documented REST equivalent) over HTTP(S) and authenticates with a bearer or API-key factor, Quant can normally onboard it",
+        "Implement a DLT checker (health validation + chain identifer lookup)",
+        "QNT staked against each node",
+        "personal_*, admin_*, txpool_* on EVM",
+        "users explicitly granted by the network owner",
+        "Run GET /networks to retrieve the live list."
+      ]
+    },
+    {
+      "id": "S08", "group": "overledger",
+      "title": "Authentication (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/authentication",
+      "supports": "Accounts are created in Quant Connect; API keys authenticate RPC; a leaked API key cannot move funds because transactions still need the caller's own signature.",
+      "quotes": [
+        "Go to Quant Connect and create an account.",
+        "A leaked API key cannot move funds.",
+        "Blockchain transactions still require a signature from the caller's own wallet private key."
+      ]
+    },
+    {
+      "id": "S09", "group": "overledger",
+      "title": "Signing (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/signing",
+      "supports": "Two custody options (client-held keys or Quant-held keys in a testnet hot wallet or contracted mainnet KMS/HSM); the Gateway never sees private keys; EVM uses ECDSA on secp256k1; raw signed transactions can be submitted through the Connectors RPC.",
+      "quotes": [
+        "if Quant holds them on your behalf (testnet hot wallet, or contracted mainnet KMS / HSM), the Signer signs internally",
+        "Either way the Gateway and the calling Flow App never see private-key material.",
+        "ECDSA on secp256k1",
+        "sign locally and submit through /rpc/{apiKey} or the Connectors RPC"
+      ]
+    },
+    {
+      "id": "S10", "group": "overledger",
+      "title": "Overledger Firewall (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/overledger-firewall",
+      "supports": "Two firewall layers; the off-chain layer gates network access per user; the on-chain Fusion Firewall allowlists addresses; token allowlist entries need governance sign-off.",
+      "quotes": [
+        "If permissioned, the user must appear in the network's allowlist.",
+        "It enforces against on-chain addresses, deciding which addresses can call which smart contracts, send which cross-chain messages, and bridge which tokens.",
+        "Overledger maintains the binding between each user and their authorised on-chain address(es) off-chain",
+        "Token allowlist entries are governance-controlled (Quant Safe signers), not per-deployer"
+      ]
+    },
+    {
+      "id": "S11", "group": "overledger",
+      "title": "Fusion Rollup (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/fusion-rollup",
+      "supports": "Fusion is an OP Stack based multi-ledger rollup; its connected networks at testnet launch; bridge contracts deployed on each connected network; four primitives; known bridge risks; firewall locked down on mainnet; deposits final once the connected chain's block has finalized; net_version kept for older wallets and tools.",
+      "quotes": [
+        "Fusion is built on the standard OP Stack architecture",
+        "Connected DLT networks on testnet launch are: Ethereum Sepolia, Polygon Amoy, Quant's permissioned Besu testnet.",
+        "The bridge and dispute contracts deployed on each connected DLT network. Standard OP Stack contracts, one deployment per chain.",
+        "Bridges carry well-known risks: lock-and-mint mismatches, custodian compromise, oracle failure.",
+        "Merge multiple chain-specific representations of the same underlying asset into a single rollup balance",
+        "locked-down on mainnet, permissive on testnet",
+        "deposits and withdrawals are signed by the user's own keys",
+        "the relevant connected DLT network block has finalized",
+        "Exposed for wallets and tools that predate eth_chainId."
+      ]
+    },
+    {
+      "id": "S12", "group": "overledger",
+      "title": "Flow Apps (Overledger documentation)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/docs/flow-apps",
+      "supports": "Prepare-Sign-Execute pattern; external Flow Apps hosted by partners; x402 payment gates via Permit2 on EVM; signed webhooks.",
+      "quotes": [
+        "We call it Prepare-Sign-Execute.",
+        "Most Flow Apps that touch a chain follow the same three-phase pattern.",
+        "external apps run as a separately-hosted service (a partner or customer deployment) that the Gateway calls over the network",
+        "today every shipped app is internal",
+        "implemented on EVM via Uniswap's Permit2 for on-chain settlement",
+        "receive HTTP POST callbacks signed with HMAC-SHA256"
+      ]
+    },
+    {
+      "id": "S13", "group": "overledger",
+      "title": "Register a new DLT node (Overledger API reference)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/reference/post_nodes",
+      "supports": "POST /nodes takes a node URL and a DLT family (EVM among them); public node URLs must come from an approved provider domain with an API key in the path.",
+      "quotes": [
+        "URL must be from an approved provider domain (for a public node).",
+        "Must include an API key in the path.",
+        "ankr.com"
+      ]
+    },
+    {
+      "id": "S14", "group": "overledger",
+      "title": "Subscribe to a specific contract event signature (Overledger API reference)",
+      "publisher": "Quant", "date": "accessed 2026-10-25",
+      "url": "https://docs.overledger.dev/reference/subscribeevent",
+      "supports": "Overledger's API can subscribe to a contract event on a given network and call back a URL.",
+      "quotes": [
+        "Subscribe to a specific contract event signature",
+        "callbackUrl",
+        "networkId"
+      ]
+    },
+    {
+      "id": "S15", "group": "redbelly",
+      "title": "Redbelly Network Technical Documentation (home)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://docs.redbelly.network/",
+      "supports": "Redbelly is a layer 1 blockchain built for real world asset tokenisation, with a DBFT consensus and an EVM implementation.",
+      "quotes": [
+        "The Redbelly Network is a layer 1 blockchain, built and optimised for real world asset tokenisation.",
+        "a scalable EVM implementation"
+      ]
+    },
+    {
+      "id": "S16", "group": "redbelly",
+      "title": "Receptor (Redbelly documentation)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://docs.redbelly.network/pages/receptor/",
+      "supports": "Receptor is Redbelly's identity and verifiable credential protocol, built on the W3C data model, with Issuer, Holder and Verifier modules; issuers that provide network access are accredited.",
+      "quotes": [
+        "Receptor is Redbelly's native digital identity and verifiable credential protocol.",
+        "Receptor is built on the W3C verifiable credential data model",
+        "the Issuer, the Holder, and the Verifier",
+        "Redbelly ensures that all issuers who provide network access are accredited"
+      ]
+    },
+    {
+      "id": "S17", "group": "redbelly",
+      "title": "Proof by Query (Redbelly documentation)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://docs.redbelly.network/pages/methods/proof-by-query/",
+      "supports": "Proof by Query uses a zero-knowledge verifier smart contract; personal data is never seen or stored by the verifier.",
+      "quotes": [
+        "a zero knowledge proof based verifier smart contract",
+        "is never seen or stored by the Verifier",
+        "credentialAtomicQuerySigV2OnChain.circom"
+      ]
+    },
+    {
+      "id": "S18", "group": "redbelly",
+      "title": "Selective Disclosure (Redbelly documentation)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://docs.redbelly.network/pages/methods/selective-disclosure/",
+      "supports": "Selective Disclosure uses BBS+ signatures and can only be used off-chain.",
+      "quotes": [
+        "Selective Disclosure involves using credentials that implement BBS+ signatures.",
+        "it can only be used off-chain"
+      ]
+    },
+    {
+      "id": "S19", "group": "redbelly",
+      "title": "Eligibility SDK overview (Redbelly documentation)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://docs.redbelly.network/pages/eligibility-sdk/eligibility-sdk/",
+      "supports": "The Eligibility SDK uses Privado ID and Iden3 zero-knowledge proofs; Averer's issuer DIDs are network specific.",
+      "quotes": [
+        "verify investor eligibility using Privado ID and the Iden3 zero-knowledge proof ecosystem",
+        "did:receptor:redbelly:mainnet:31AAH8sSaGd6fpnG1TcB6yQ4UZnNeyHzTk5aM2P7rjv",
+        "did:receptor:redbelly:testnet:31K82iKCtE6ciDc7oAr3T5EpjZb4S1EFM7c4xJaWkM2"
+      ]
+    },
+    {
+      "id": "S20", "group": "redbelly",
+      "title": "Configure Eligibility Criteria (Redbelly documentation)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://docs.redbelly.network/pages/eligibility-sdk/configure-eligibility-criteria/",
+      "supports": "Supported query types (on-chain single query only; multi query planned); credential types including AML/CTF and Australian sophisticated or wholesale investor; revocation checks should stay on.",
+      "quotes": [
+        "On-chain Single Query",
+        "On-chain Multi Query",
+        "AUSophisticatedWholesaleInvestorCredential",
+        "AMLCTFCredential",
+        "Verifiers should keep revocation checks enabled for production and mainnet flows"
+      ]
+    },
+    {
+      "id": "S21", "group": "redbelly",
+      "title": "Redbelly Network environments (Vine developer portal)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/environments/",
+      "supports": "Mainnet chain ID 151 and Testnet chain ID 153 with public RPC URLs; Ankr and Uniblock listed as third-party public RPC providers for Mainnet.",
+      "quotes": [
+        "https://governors.mainnet.redbelly.network",
+        "Chain ID: 151",
+        "Chain ID: 153",
+        "https://rpc.ankr.com/redbelly_mainnet",
+        "Uniblock requires an API key on the x-api-key header for this endpoint."
+      ]
+    },
+    {
+      "id": "S22", "group": "redbelly",
+      "title": "DBFT and super block: security, finality and scalability (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/consensus/",
+      "supports": "DBFT is leaderless, tolerates fewer than a third faulty nodes, gives deterministic finality in seconds and cannot fork.",
+      "quotes": [
+        "DBFT is a leaderless consensus algorithm",
+        "DBFT can tolerate faults up to t < n/3",
+        "transactions can be deterministically finalised in a matter of seconds",
+        "Redbelly blockchain cannot fork"
+      ]
+    },
+    {
+      "id": "S23", "group": "redbelly",
+      "title": "EVM compatibility (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/consensus/evm-compatibility/",
+      "supports": "Redbelly is EVM compatible; EVM version Prague; Solidity v0.8.30.",
+      "quotes": [
+        "Redbelly is compatible with the Ethereum Virtual Machine (EVM) and can execute smart contracts written for the EVM.",
+        "Prague",
+        "v0.8.30"
+      ]
+    },
+    {
+      "id": "S24", "group": "redbelly",
+      "title": "Network fees (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/network-fees/",
+      "supports": "Gas is priced in fixed US dollar terms using an on-chain oracle; a simple native transaction costs US$0.01 in gas.",
+      "quotes": [
+        "the unit price of gas remains fixed in US$ terms",
+        "The gas model ensures that a simple native transaction on Redbelly costs US$0.01.",
+        "Redbelly implements an on chain, distributed oracle solution"
+      ]
+    },
+    {
+      "id": "S25", "group": "redbelly",
+      "title": "Identity and participation on the network (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/identity/",
+      "supports": "All participants must prove who they are before gaining access; users claim an access credential from an accredited issuer before self-enabling write access; business verification exists.",
+      "quotes": [
+        "all network participants MUST prove they are who they say they are before gaining access",
+        "Before users can self-enable their accounts with write access to the network, they must claim an access credential from a network accredited issuer."
+      ]
+    },
+    {
+      "id": "S26", "group": "redbelly",
+      "title": "User access (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/identity/user-access/",
+      "supports": "Write access is enabled through a specific network smart contract after a passport and biometric check with an accredited issuer.",
+      "quotes": [
+        "self enable their account with write access to the network through a specific network smart contract",
+        "prove they possess a valid photo identity document (passport) which is verified via biometric checks"
+      ]
+    },
+    {
+      "id": "S27", "group": "redbelly",
+      "title": "Accredited issuers (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/identity/accredited-issuers/",
+      "supports": "Accredited issuers onboard users and businesses and are listed in an on-chain registry; business onboarding needs an onboarded officeholder.",
+      "quotes": [
+        "All accredited issuers are listed in an on chain registry.",
+        "0x2d68f1C50a057a310EeF28DF3199F95A65cE4ac5",
+        "For businesses at least one officeholder must have onboarded as a user"
+      ]
+    },
+    {
+      "id": "S28", "group": "redbelly",
+      "title": "Eligibility on Redbelly (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/identity/eligibility/",
+      "supports": "Eligibility checks can restrict smart contract functions to users who prove they meet criteria; developers choose which issuers they trust.",
+      "quotes": [
+        "Eligibility criteria checks can be used to ensure that only users that can prove they meet the criteria can interact with a smart contract's functions.",
+        "A developer will also need to determine which issuers they trust"
+      ]
+    },
+    {
+      "id": "S29", "group": "redbelly",
+      "title": "Business verification (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/business-verification/",
+      "supports": "Businesses prove they are incorporated to an accredited issuer.",
+      "quotes": [
+        "To be verified, businesses need to prove they are an incorporated entity to a network accredited issuer."
+      ]
+    },
+    {
+      "id": "S30", "group": "redbelly",
+      "title": "Redbelly Access (official access dApp)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://access.redbelly.network/",
+      "supports": "Averer is the accredited issuer that verifies identity; more accounts can be connected to one identity; Testnet access is offered after verification.",
+      "quotes": [
+        "Your identity will be verified by an accredited issuer, Averer.",
+        "you will be offered the option to add more accounts which will be connected to your identity",
+        "you will be offered the option to create a Testnet account too"
+      ]
+    },
+    {
+      "id": "S31", "group": "redbelly",
+      "title": "Becoming a node operator (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/nodes/become-operator/",
+      "supports": "Node operators need network access and selection; submissions are currently closed.",
+      "quotes": [
+        "Node operators MUST have network access for 2 accounts",
+        "Submissions currently closed"
+      ]
+    },
+    {
+      "id": "S32", "group": "redbelly",
+      "title": "Redbelly Network native currency (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/native-currency/",
+      "supports": "RBNT routes listed: Base via LayerZero, Ethereum via Polymer; Lucid Labs Bridge to bring RBNT back to Redbelly.",
+      "quotes": [
+        "Base (Via LayerZero)",
+        "Ethereum mainnet* (Via Polymer)",
+        "To bring RBNT from a non-Redbelly chain to Redbelly, use Lucid Labs Bridge"
+      ]
+    },
+    {
+      "id": "S33", "group": "bridges",
+      "title": "LayerZero bridged tokens (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/bridged-tokens/layerzero/",
+      "supports": "Tokens on Redbelly that can be bridged via LayerZero using Stargate, including RBNT, USDT0, AUDF and WETH.",
+      "quotes": [
+        "Tokens on Redbelly Network that can be bridged to other chains via LayerZero, using Stargate, and vice versa.",
+        "AUDF"
+      ]
+    },
+    {
+      "id": "S34", "group": "bridges",
+      "title": "Lucid Labs bridged tokens (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/bridged-tokens/lucidlabs/",
+      "supports": "Lucid Labs is powered by Polymer and LayerZero; it lists WRBNT on Ethereum at 0xb45f...bF13.",
+      "quotes": [
+        "Powered by Polymer and LayerZero.",
+        "0xb45fFB51984d626Ee758b336C61Cf20990c6bF13"
+      ]
+    },
+    {
+      "id": "S35", "group": "bridges",
+      "title": "Celer cBridge bridged tokens (Vine)",
+      "publisher": "Redbelly Network", "date": "accessed 2026-10-25",
+      "url": "https://vine.redbelly.network/bridged-tokens/celer/",
+      "supports": "Through Celer, RBNT bridges out from Redbelly to Ethereum and BNB Chain, not back; Celer's wRBNT on Ethereum is a different contract.",
+      "quotes": [
+        "RBNT bridges out from Redbelly to Ethereum and BNB Chain, not back.",
+        "0x063a1D5BFEAb213c9c12f47b704fccf81D60983e"
+      ]
+    },
+    {
+      "id": "S36", "group": "bridges",
+      "title": "Celer Announces cBridge Support for Redbelly",
+      "publisher": "Celer Network", "date": "2025-08-01",
+      "url": "https://blog.celer.network/2025/08/01/celer-announces-cbridge-support-for-redbelly/",
+      "supports": "cBridge connects Ethereum, BNB Chain and Redbelly with a pegged bridge; the listed directions put USDT, USDC, WBTC and ETH into Redbelly and RBNT out of it.",
+      "quotes": [
+        "Celer is supporting asset and token bridging initially via a pegged bridge method",
+        "USDT, USDC, WBTC, ETH",
+        "Redbelly → Ethereum"
+      ]
+    },
+    {
+      "id": "S37", "group": "bridges",
+      "title": "Redbelly Network on X: Wrapped RBNT live on Ethereum Mainnet",
+      "publisher": "Redbelly Network", "date": "2025-02-14",
+      "url": "https://x.com/RedbellyNetwork/status/1890340030197166112",
+      "supports": "Redbelly announced Wrapped RBNT on Ethereum with official contract 0xb45ffb51984d626ee758b336c61cf20990c6bf13, powered by Router Protocol's Nitro.",
+      "quotes": [
+        "Wrapped RBNT Token is now live on Ethereum Mainnet.",
+        "0xb45ffb51984d626ee758b336c61cf20990c6bf13"
+      ],
+      "verifyNote": "X serves this page only to some clients; the checker falls back to the public oEmbed endpoint for the same post."
+    },
+    {
+      "id": "S38", "group": "bridges",
+      "title": "Deployed Endpoints, Message Libraries, and Executors (LayerZero V2)",
+      "publisher": "LayerZero", "date": "accessed 2026-10-25",
+      "url": "https://docs.layerzero.network/v2/deployments/deployed-contracts",
+      "supports": "Redbelly Mainnet (chain ID 151) is listed among LayerZero V2 deployments.",
+      "quotes": [
+        "Redbelly Mainnet"
+      ]
+    },
+    {
+      "id": "S39", "group": "tokeniser",
+      "title": "Tokeniser (home and FAQ)",
+      "publisher": "Tokeniser Pty Ltd", "date": "accessed 2026-10-25",
+      "url": "https://tokeniser.com/",
+      "supports": "Tokeniser runs on Redbelly with identity and eligibility built into the protocol; eligibility is programmed into every asset and every transfer is checked; Tokeniser offers an API and MCP.",
+      "quotes": [
+        "Tokeniser operates on Redbelly Network, Australia's public digital token infrastructure, with identity and eligibility built into the protocol.",
+        "Tokeniser programs eligibility into every asset at the protocol level: identity, KYC, AML, CTF, wholesale and sophisticated investor tests, and TMD.",
+        "Every holder is verified and every transfer checked against the asset's rules, automatically.",
+        "Our API and MCP let you integrate Tokeniser with your existing registry"
+      ]
+    },
+    {
+      "id": "S40", "group": "tokeniser",
+      "title": "Tokeniser technology",
+      "publisher": "Tokeniser Pty Ltd", "date": "accessed 2026-10-25",
+      "url": "https://tokeniser.com/technology",
+      "supports": "Eligibility, identity and TMD enforced at the point of transfer; Averer provides identity and wallet; Tokeniser's statement on connecting to other networks.",
+      "quotes": [
+        "Eligibility, identity and your target market determination are enforced at the point of transfer, every time.",
+        "Identity and the AI-native wallet. Verifiable credentials gate every holder",
+        "Full EVM compatibility gives connection to more than 150 networks out of the box, with permissioned or permissionless access as your mandate allows."
+      ]
+    },
+    {
+      "id": "S41", "group": "tokeniser",
+      "title": "Tokeniser: Automated compliance",
+      "publisher": "Tokeniser Pty Ltd", "date": "accessed 2026-10-25",
+      "url": "https://tokeniser.com/product/superpowers/automated-compliance",
+      "supports": "Trades that fail an eligibility check do not proceed, and every check is logged.",
+      "quotes": [
+        "Trades that fail a check do not proceed, and every check is logged."
+      ]
+    },
+    {
+      "id": "S42", "group": "tokeniser",
+      "title": "Tokeniser: Secondary transfer",
+      "publisher": "Tokeniser Pty Ltd", "date": "accessed 2026-10-25",
+      "url": "https://tokeniser.com/product/superpowers/secondary-transfer",
+      "supports": "Ownership and payment are exchanged in a single step between eligible investors.",
+      "quotes": [
+        "When two eligible investors agree to a transfer, ownership and payment are exchanged in a single step."
+      ]
+    },
+    {
+      "id": "S43", "group": "tokeniser",
+      "title": "Tokeniser: Collateral mobility",
+      "publisher": "Tokeniser Pty Ltd", "date": "accessed 2026-10-25",
+      "url": "https://tokeniser.com/product/superpowers/collateral-mobility",
+      "supports": "Units pledged as collateral remain locked until the loan is repaid; the issuer approves lenders.",
+      "quotes": [
+        "You approve the lenders and set the terms. Investors pledge units as security, and the units remain locked until the loan is repaid."
+      ]
+    },
+    {
+      "id": "S44", "group": "dao",
+      "title": "TASK-08 Existing Bridge Integration Guide (winning entry archive)",
+      "publisher": "Redbelly DAO Community Task Board", "date": "accessed 2026-10-25",
+      "url": "https://github.com/Redbelly-DAO-Community-Taskboard/TASK-08-bridge-integration-guide",
+      "supports": "A working lock-and-mint testnet bridge from Ethereum Sepolia to Redbelly Testnet secured by a 2-of-3 relayer set.",
+      "quotes": [
+        "Secured by a 2-of-3 multisig relayer network.",
+        "lock-and-mint bridge"
+      ]
+    },
+    {
+      "id": "S45", "group": "dao",
+      "title": "Redbridge testnet demo (TASK-08)",
+      "publisher": "Redbelly DAO community", "date": "accessed 2026-10-25",
+      "url": "https://redbridge.test-hub.xyz/",
+      "supports": "Live testnet demo: lock ETH on Sepolia and receive WETH.rb on Redbelly Testnet.",
+      "quotes": [
+        "Lock ETH on Ethereum Sepolia and receive WETH.rb 1:1 on Redbelly Testnet."
+      ]
+    },
+    {
+      "id": "S46", "group": "dao",
+      "title": "redbelly-testnet-bridge: article (TASK-08 community entry)",
+      "publisher": "Redbelly DAO community", "date": "accessed 2026-10-25",
+      "url": "https://github.com/tycayomide/redbelly-testnet-bridge/blob/main/ARTICLE.md",
+      "supports": "Unverified wallets cannot send any Testnet transaction; Mainnet and Testnet approvals are separate; LayerZero is live on Mainnet but not Testnet.",
+      "quotes": [
+        "Sender not authorised to write transactions",
+        "Mainnet and Testnet approvals are separate."
+      ]
+    },
+    {
+      "id": "S47", "group": "dao",
+      "title": "TASK-16 Unstick Your RBNT: Cross-Chain Recovery Playbook (winning entry archive)",
+      "publisher": "Redbelly DAO Community Task Board", "date": "accessed 2026-10-25",
+      "url": "https://github.com/Redbelly-DAO-Community-Taskboard/TASK-16-cross-chain-recovery-playbook",
+      "supports": "Archived DAO playbook for recovering stuck cross-chain RBNT (the deliverable PDF in the repository covers Polymer transfers to Ethereum that must be claimed by hand).",
+      "quotes": [
+        "Unstick Your RBNT: Cross-Chain Recovery Playbook"
+      ]
+    },
+    {
+      "id": "S48", "group": "dao",
+      "title": "TASK-29 brief: Quant Overledger and Redbelly Interoperability Research",
+      "publisher": "Redbelly DAO Community Task Board", "date": "accessed 2026-10-25",
+      "url": "https://taskboard.redbellydao.network/tasks/TASK-29",
+      "supports": "Redbelly and Quant have no announced partnership or talks; Redbelly has not published an official position on bridging.",
+      "quotes": [
+        "Redbelly and Quant have no announced partnership or talks",
+        "Redbelly has not published an official position on bridging"
+      ]
+    },
+    {
+      "id": "S49", "group": "live",
+      "title": "Live checks against Redbelly RPC and the Overledger gateway (this report)",
+      "publisher": "This report, scripts/probe.mjs", "date": "2026-10-25",
+      "url": "evidence/live-checks.json",
+      "internal": true,
+      "supports": "Results of 22 reproducible checks: chain IDs, supported methods, block tags, refusal of an unverified write, presence of common contracts, and Overledger endpoints that need an account."
+    }
+  ]
+}

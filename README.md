@@ -1,0 +1,78 @@
+# Quant Overledger and Redbelly Interoperability Research
+
+Feasibility research for the Redbelly DAO Community Task Board, **TASK-29**. It answers three questions from public sources: could Redbelly Network connect to Quant's Overledger, what would that take, and what could it offer institutions that use Redbelly. It also explains how Receptor credentials and Tokeniser assets would behave across chains, and where compliance could break.
+
+> **Notice.** Redbelly and Quant have no announced partnership or talks, and nothing in this repository suggests otherwise. Redbelly has not published an official position on bridging, so anything not in a public source is treated as unknown. No price talk, no investment advice.
+
+## The answer in brief
+
+- **Not connected today.** Redbelly is not named in the Overledger documentation reviewed, and Overledger's live network list needs an account to read.
+- **A thin link looks possible on paper, and is untested.** Overledger lets accounts add new EVM networks through self-serve. Redbelly is EVM compatible, and Ankr, a provider on Overledger's approved list, already serves Redbelly Mainnet. Quant decides whether a chain that anyone can read but only verified accounts can write belongs on that route.
+- **Anything deeper needs Quant.** Quant-held signing, Flow App workflows and moving assets through Fusion Rollup are not possible yet.
+- **Compliance does not travel by default.** Receptor proofs and Tokeniser transfer rules are checked on Redbelly. A copy elsewhere follows that chain's rules unless a connection is designed to carry them.
+- **Small, concrete gaps found by live checks:** Redbelly does not serve `net_version`, its `safe` block tag lags `finalized`, Permit2 is not deployed, and an unverified sender is refused as designed.
+
+Every claim behind these lines is linked to its source in the report and the source list.
+
+## Deliverables
+
+| Required by the task | Where it is |
+|---|---|
+| 1. The report (Word file or PDF) | [`deliverables/Overledger-Redbelly-Feasibility-Report.pdf`](deliverables/Overledger-Redbelly-Feasibility-Report.pdf) and [`.docx`](deliverables/Overledger-Redbelly-Feasibility-Report.docx), plus a [Markdown copy](deliverables/Overledger-Redbelly-Feasibility-Report.md). Also published as the website in `site/`. |
+| 2. A short community summary | [`deliverables/Community-Summary.md`](deliverables/Community-Summary.md) (a few paragraphs) and [`deliverables/X-Thread.txt`](deliverables/X-Thread.txt) (8 posts, each within 280 characters), with three 1600 by 900 share cards in `site/assets/img/`. |
+| 3. A source list with a link for every factual claim | [`deliverables/Sources.md`](deliverables/Sources.md) and [`deliverables/Sources.csv`](deliverables/Sources.csv): 49 sources, the exact phrases each one supports, and where each is cited. |
+
+## How the claims are verified
+
+Every external source has the exact phrases we rely on recorded in `content/sources.json`. Three commands re-check the work:
+
+| Command | What it does | Network |
+|---|---|---|
+| `npm run lint` | Every Confirmed statement cites a source, every citation resolves, every source is used, the thread fits X, and the text has no partnership wording, price talk, personal credit, dashes or emoji. | offline |
+| `npm run verify:sources` | Loads all 48 external links and confirms each recorded phrase is still on the page. Writes `evidence/source-check.json`. | online |
+| `npm run probe` | Repeats 22 live checks against Redbelly's public RPC and Overledger's gateway. No credentials. The only write is a zero-value transaction from a new, unfunded key, which Redbelly refuses. Writes `evidence/live-checks.json`. | online |
+| `npm test` | Runs the lint plus checks on the built site: every internal link and anchor resolves, every asset exists, every citation chip points at a listed source, the downloads exist. | offline |
+
+Last results are shown on the website's Verification page and stored in `evidence/`.
+
+## Repository layout
+
+```
+content/          single source of truth
+  report.md       the report, with Confirmed / Analysis / Unknown panels and [Sxx] citations
+  community-summary.md
+  x-thread.md
+  sources.json    49 sources, what each supports, and the phrases checked on the live page
+scripts/          build, render, lint, verify-sources, probe, test-site
+evidence/         results of the last source check and live checks
+deliverables/     PDF, Word, Markdown, thread, source list (generated)
+site/             static website, ready to deploy (generated pages plus assets)
+```
+
+## Build
+
+Requires Node.js 20 or later.
+
+```bash
+npm install
+npm run build        # site pages, Markdown, CSV, then PDF, Word file, figures and share cards
+npm test             # offline checks
+npm run test:online  # re-check every source link and phrase, and repeat the live checks
+```
+
+The PDF, figures and cards are rendered with headless Chromium through Playwright. If Chromium is not installed, run `npx playwright install chromium` once.
+
+## Deploy
+
+`site/` is a plain static site with no build step at request time.
+
+- **Vercel:** import the repository. `vercel.json` sets the output directory to `site` and adds security headers. No build command is needed because the generated files are committed.
+- **Any static host:** serve the `site/` folder. Locally: `npm run serve` and open http://localhost:8080.
+
+## Design
+
+The website, PDF and cards follow the Redbelly DAO Task Board brand kit ("Kinetic Consensus"): slate surfaces, the single brand red `#EF5350`, Be Vietnam Pro for prose and JetBrains Mono only for machine values, 4px and 8px radii, tonal depth with no drop shadows, status shown as a dot plus a monospace label, a dark theme by default with the light counterpart, and a dated "last verified" line on graphics that carry facts which expire. Motion is limited to the hero and the figures, and switches off for print and for anyone who prefers reduced motion. Fonts are self-hosted under the SIL Open Font License.
+
+## Rights
+
+Submitted under the Redbelly DAO Community Task Board participation terms. Third-party marks and quoted material belong to their owners and are cited to their sources.
