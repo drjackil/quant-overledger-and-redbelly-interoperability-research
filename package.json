@@ -11,6 +11,7 @@
     "lint": "node scripts/lint-content.mjs",
     "verify:sources": "node scripts/verify-sources.mjs",
     "probe": "node scripts/probe.mjs",
+    "probe:account": "node scripts/overledger-account-probe.mjs",
     "test": "node scripts/lint-content.mjs && node scripts/test-site.mjs",
     "test:online": "node scripts/verify-sources.mjs && node scripts/probe.mjs --check",
     "serve": "node scripts/serve.mjs"

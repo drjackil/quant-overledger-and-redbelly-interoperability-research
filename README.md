@@ -6,7 +6,7 @@ Feasibility research for the Redbelly DAO Community Task Board, **TASK-29**. It 
 
 ## The answer in brief
 
-- **Not connected today.** Redbelly is not named in the Overledger documentation reviewed, and Overledger's live network list needs an account to read.
+- **Not connected today.** Redbelly is not named in the Overledger documentation reviewed. Read with an account on 25 October 2026, Overledger's live network list held 59 networks (all but one of them test networks) and none of them is Redbelly.
 - **A thin link looks possible on paper, and is untested.** Overledger lets accounts add new EVM networks through self-serve. Redbelly is EVM compatible, and Ankr, a provider on Overledger's approved list, already serves Redbelly Mainnet. Quant decides whether a chain that anyone can read but only verified accounts can write belongs on that route.
 - **Anything deeper needs Quant.** Quant-held signing, Flow App workflows and moving assets through Fusion Rollup are not possible yet.
 - **Compliance does not travel by default.** Receptor proofs and Tokeniser transfer rules are checked on Redbelly. A copy elsewhere follows that chain's rules unless a connection is designed to carry them.
@@ -34,6 +34,18 @@ Every external source has the exact phrases we rely on recorded in `content/sour
 | `npm test` | Runs the lint plus checks on the built site: every internal link and anchor resolves, every asset exists, every citation chip points at a listed source, the downloads exist. | offline |
 
 Last results are shown on the website's Verification page and stored in `evidence/`.
+
+## Account-level checks (optional, needs access)
+
+Three checks cannot be made with public access, so they are packaged separately. Run them from the repository folder.
+
+| Command | What it does | Needs |
+|---|---|---|
+| `OVERLEDGER_API_KEY=fk_... npm run probe:account` | Stage 1, read-only: the live Overledger network list, whether Redbelly is in it, and Fusion's connected networks | An Overledger API key from Quant Connect |
+| `... npm run probe:account -- --node-test` | Stage 2: sends test calls through Overledger to a Redbelly Testnet node, then deletes the node. Prefer a node made private in the Quant Connect form, passed as `NODE_ID=...` | Same key |
+| `... REDBELLY_TESTNET_PRIVATE_KEY=0x... npm run probe:account -- --node-test --write` | Stage 3: one zero-value self-transfer on Redbelly Testnet through Overledger | A Redbelly-verified testnet address |
+
+Keys are never written to disk. Results go to `evidence/overledger-account-checks.json`; `npm run build` then turns them into the report's "Account-level checks" section. Without that file the section says the checks have not been run.
 
 ## Repository layout
 

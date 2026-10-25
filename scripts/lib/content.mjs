@@ -35,8 +35,22 @@ export const DIAGRAMS = {
   journey: 'Figure 4. Where Redbelly\'s compliance checks run, and where they could break once an asset leaves.'
 };
 
+export const ACCOUNT_FILE = 'evidence/overledger-account-checks.json';
+export const hasAccountChecks = () => existsSync(join(ROOT, ACCOUNT_FILE));
+
 export function loadSources() {
   const data = readJson('content/sources.json');
+  // S50 exists only once the account-level checks have been run, so it is never a dead link.
+  if (hasAccountChecks()) {
+    const a = readJson(ACCOUNT_FILE);
+    data.sources.push({
+      id: 'S50', group: 'live',
+      title: 'Account-level checks through an Overledger account (this report)',
+      publisher: 'This report, scripts/overledger-account-probe.mjs', date: a.ranAt.slice(0, 10),
+      url: ACCOUNT_FILE, internal: true,
+      supports: `Results of ${a.checks.length} checks made with an Overledger API key, stages ${a.stages.join(', ')}: the live network list, and where run, a Redbelly Testnet node used through Overledger.`
+    });
+  }
   const byId = Object.fromEntries(data.sources.map((s) => [s.id, s]));
   return { ...data, byId };
 }
@@ -98,6 +112,8 @@ export function parseDoc(raw) {
     const open = line.match(/^:::\s*(confirmed|analysis|unknown|live|notice)\s*$/);
     const head = line.match(/^(#{2,3})\s+(.+?)\s*(?:\{#([\w-]+)\})?\s*$/);
     const diag = line.match(/^@diagram\((\w+)\)\s*$/);
+    const inc = line.match(/^@include\(account-checks\)\s*$/);
+    if (inc) { flush(); nodes.push(...accountCheckNodes()); continue; }
     if (open) { flush(); panel = { kind: open[1], lines: [] }; }
     else if (head) { flush(); nodes.push({ type: 'heading', level: head[1].length, text: head[2], id: head[3] || slug(head[2]) }); }
     else if (diag) { flush(); nodes.push({ type: 'diagram', name: diag[1] }); }
@@ -178,3 +194,33 @@ export function parseThread(raw) {
 
 // X counts every link as 23 characters.
 export const xLength = (post) => [...post.replace(/https?:\/\/\S+/g, 'x'.repeat(23))].length;
+
+// Report panels for the account-level checks: results when they exist, otherwise a plain "not run yet".
+export function accountCheckNodes() {
+  if (!hasAccountChecks()) {
+    return [{ type: 'panel', kind: 'unknown', md: [
+      '**Not run yet.** The account-level checks below have not been run for this version of the report, so their results are unknown. Anyone with an Overledger API key can run them:',
+      '',
+      '1. `OVERLEDGER_API_KEY=... npm run probe:account` reads the live network list and shows whether Redbelly is in it. Read-only.',
+      '2. Adding `-- --node-test` registers a Redbelly Testnet node, sends test calls through Overledger, then deletes the node.',
+      '3. Adding `--write` with a Redbelly-verified testnet key sends one zero-value transfer through Overledger.',
+      '',
+      'When the results file exists, the next build replaces this panel with the results.'
+    ].join('\n') }];
+  }
+  const a = readJson(ACCOUNT_FILE);
+  const date = new Date(a.ranAt).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const cell = (s) => String(s).replace(/\|/g, '/').replace(/\n/g, ' ');
+  const rows = a.checks.map((c) => {
+    const st = c.pass === null ? '[[unk:Observed]]' : c.pass ? '[[ok:As expected]]' : '[[no:Not as expected]]';
+    return `| ${c.stage} | ${cell(c.title)} | ${st} | ${cell(c.meaning)} [S50] |`;
+  });
+  const stages = { 1: 'stage 1 (read-only)', 2: 'stage 2 (Testnet node)', 3: 'stage 3 (verified write)' };
+  return [{ type: 'panel', kind: 'live', md: [
+    `Run on ${date} through \`${a.gateway}\`, covering ${a.stages.map((s) => stages[s]).join(', ')}. ${a.passed} of ${a.total} graded checks behaved as expected [S50].`,
+    '',
+    '| Stage | Check | Result | What it shows |',
+    '|---|---|---|---|',
+    ...rows
+  ].join('\n') }];
+}

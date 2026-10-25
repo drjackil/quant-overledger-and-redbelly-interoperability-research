@@ -311,6 +311,7 @@ function renderSources() {
 // ---------- evidence page ----------
 
 function renderEvidence() {
+  const acct = (() => { try { return JSON.parse(readFileSync(join(ROOT, 'evidence/overledger-account-checks.json'), 'utf8')); } catch { return null; } })();
   const checks = (live?.checks || []).map((c) => `<li class="check"><span class="status status-${c.pass ? 'ok' : 'no'}"><span class="dot"></span>${c.pass ? 'PASS' : 'FAIL'}</span><b>${esc(c.title)}</b><small>${esc(c.request)} on ${esc(c.endpoint.replace(/^https:\/\//, ''))}. Expected: ${esc(c.expectation)}. ${esc(c.meaning)}</small><pre>${esc(JSON.stringify(c.response).slice(0, 320))}</pre></li>`).join('');
   const srcRows = (src?.results || []).map((r) => `<tr><td><a href="sources.html#src-${r.id}">${r.id}</a></td><td><span class="status status-${r.ok ? 'ok' : 'no'}"><span class="dot"></span>${r.ok ? 'PASS' : 'FAIL'}</span></td><td class="mono">${r.status}</td><td class="mono">${r.quotes.filter((q) => q.found).length}/${r.quotes.length}</td><td class="mono">${esc(r.method)}</td><td><a href="${esc(r.url)}" target="_blank" rel="noopener" class="mono" style="overflow-wrap:anywhere">${esc(r.url.replace(/^https:\/\//, ''))}</a></td></tr>`).join('');
   const body = `<main id="main" class="page">
@@ -328,8 +329,15 @@ function renderEvidence() {
   <h2 id="links">Source link and quote check</h2>
   <p>Raw output: <a href="evidence/source-check.json">evidence/source-check.json</a>. Pages are fetched as HTML first, then rendered in a headless browser if they need JavaScript.</p>
   <div class="table-wrap"><table><thead><tr><th>Source</th><th>Result</th><th>HTTP</th><th>Phrases</th><th>Method</th><th>Link</th></tr></thead><tbody>${srcRows}</tbody></table></div>
-  <h2 id="limits">What was not tested</h2>
-  <p>We did not open an Overledger account, call authenticated Overledger endpoints, register a node or complete any transaction. Statements about how Overledger would behave with Redbelly are labelled as analysis in the report.</p>
+  <h2 id="account">Account-level checks</h2>
+  ${acct ? `<p>Run with an Overledger API key on ${esc(new Date(acct.ranAt).toUTCString().slice(5, 16))}, stage ${acct.stages.join(', ')}. Raw output: <a href="evidence/overledger-account-checks.json">evidence/overledger-account-checks.json</a>. Keys are never stored.</p>
+  <ul class="check-list">${acct.checks.map((c) => `<li class="check"><span class="status status-${c.pass === null ? 'unk' : c.pass ? 'ok' : 'no'}"><span class="dot"></span>${c.pass === null ? 'OBSERVED' : c.pass ? 'PASS' : 'FAIL'}</span><b>${esc(c.title)}</b><small>${esc(c.request)}. ${esc(c.meaning)}</small></li>`).join('')}</ul>` : '<p>Not run yet. See the README for <code>npm run probe:account</code>.</p>'}
+  <h2 id="limits">What was not tested, and why</h2>
+  <div class="table-wrap"><table><thead><tr><th>Not done</th><th>Why</th><th>How to do it</th></tr></thead><tbody>
+    <tr><td>Registering a Redbelly node on Overledger (stage 2)</td><td>For a network Overledger does not list, the first registration also creates the network for other Overledger users. A public Redbelly entry could be read as a listing.</td><td class="mono">npm run probe:account -- --node-test, ideally with a node made private in Quant Connect (NODE_ID=...)</td></tr>
+    <tr><td>Completing a Redbelly transaction through Overledger (stage 3)</td><td>Writing on Redbelly needs an address verified with a passport and biometric check by an accredited issuer. That is personal identity, so it can only be done by its owner.</td><td class="mono">add --write with REDBELLY_TESTNET_PRIVATE_KEY of a verified testnet address</td></tr>
+  </tbody></table></div>
+  <p>Statements about how Overledger would behave with a Redbelly node are therefore labelled as analysis in the report.</p>
 </main>`;
   return layout({ title: 'Verification: Overledger and Redbelly', description: 'Automated checks behind the Overledger and Redbelly feasibility report.', page: 'evidence.html', body });
 }
@@ -444,7 +452,7 @@ writeFileSync(join(SITE, 'sources.html'), renderSources());
 writeFileSync(join(SITE, 'evidence.html'), renderEvidence());
 writeFileSync(join(SITE, '404.html'), render404());
 writeFileSync(join(BUILD, 'print.html'), renderPrint());
-for (const f of ['live-checks.json', 'source-check.json']) {
+for (const f of ['live-checks.json', 'source-check.json', 'overledger-account-checks.json']) {
   try { copyFileSync(join(ROOT, 'evidence', f), join(SITE, 'evidence', f)); } catch {}
 }
 

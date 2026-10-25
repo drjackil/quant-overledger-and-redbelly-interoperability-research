@@ -1,6 +1,6 @@
 # Source list
 
-Quant Overledger and Redbelly Interoperability Research. 49 sources, accessed 2026-10-25. Every external link and the quoted phrases below were re-checked on 25 October 2026 with `npm run verify:sources`.
+Quant Overledger and Redbelly Interoperability Research. 50 sources, accessed 2026-10-25. Every external link and the quoted phrases below were re-checked on 25 October 2026 with `npm run verify:sources`.
 
 ## The Clearing House and Quant announcements
 
@@ -107,7 +107,7 @@ Quoted phrases checked on the live page:
 - "users explicitly granted by the network owner"
 - "Run GET /networks to retrieve the live list."
 
-Cited in: Read this first; The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; What we tested ourselves; Can Redbelly connect now?; What a connection would take; Not possible yet, and unknown; What would change the answer; Glossary
+Cited in: Read this first; The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; What we tested ourselves; Account-level checks; Can Redbelly connect now?; What a connection would take; Not possible yet, and unknown; What would change the answer; Glossary
 
 **S08. Authentication (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -119,7 +119,7 @@ Quoted phrases checked on the live page:
 - "A leaked API key cannot move funds."
 - "Blockchain transactions still require a signature from the caller's own wallet private key."
 
-Cited in: Overledger in plain words; What a connection would take
+Cited in: Overledger in plain words; Account-level checks; What a connection would take
 
 **S09. Signing (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -163,7 +163,7 @@ Quoted phrases checked on the live page:
 - "the relevant connected DLT network block has finalized"
 - "Exposed for wallets and tools that predate eth_chainId."
 
-Cited in: The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; What we tested ourselves; Can Redbelly connect now?; What a connection would take; Credentials and assets across chains; Not possible yet, and unknown; What would change the answer; Glossary
+Cited in: The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; What we tested ourselves; Account-level checks; Can Redbelly connect now?; What a connection would take; Credentials and assets across chains; Not possible yet, and unknown; What would change the answer; Glossary
 
 **S12. Flow Apps (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -190,7 +190,7 @@ Quoted phrases checked on the live page:
 - "Must include an API key in the path."
 - "ankr.com"
 
-Cited in: Overledger in plain words; Can Redbelly connect now?
+Cited in: Overledger in plain words; Account-level checks; Can Redbelly connect now?
 
 **S14. Subscribe to a specific contract event signature (Overledger API reference)**  
 Quant, accessed 2026-10-25  
@@ -350,7 +350,7 @@ Quoted phrases checked on the live page:
 - "self enable their account with write access to the network through a specific network smart contract"
 - "prove they possess a valid photo identity document (passport) which is verified via biometric checks"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly, in the terms that matter here; Account-level checks
 
 **S27. Accredited issuers (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -395,7 +395,7 @@ Quoted phrases checked on the live page:
 - "you will be offered the option to add more accounts which will be connected to your identity"
 - "you will be offered the option to create a Testnet account too"
 
-Cited in: Redbelly, in the terms that matter here; Credentials and assets across chains
+Cited in: Redbelly, in the terms that matter here; Account-level checks; Credentials and assets across chains
 
 **S31. Becoming a node operator (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -607,4 +607,11 @@ This report, scripts/probe.mjs, 2026-10-25
 evidence/live-checks.json  
 Supports: Results of 22 reproducible checks: chain IDs, supported methods, block tags, refusal of an unverified write, presence of common contracts, and Overledger endpoints that need an account.
 
-Cited in: The answer on one page; What we tested ourselves; Can Redbelly connect now?; What a connection would take; Not possible yet, and unknown
+Cited in: The answer on one page; What we tested ourselves; Account-level checks; Can Redbelly connect now?; What a connection would take; Not possible yet, and unknown
+
+**S50. Account-level checks through an Overledger account (this report)**  
+This report, scripts/overledger-account-probe.mjs, 2026-10-25  
+evidence/overledger-account-checks.json  
+Supports: Results of 5 checks made with an Overledger API key, stages 1: the live network list, and where run, a Redbelly Testnet node used through Overledger.
+
+Cited in: The answer on one page; Account-level checks; Can Redbelly connect now?; Not possible yet, and unknown

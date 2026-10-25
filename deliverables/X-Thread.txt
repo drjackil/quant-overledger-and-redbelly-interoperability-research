@@ -1,8 +1,8 @@
-1/ Could Redbelly plug into Quant's Overledger? We researched it from public sources only.
+1/ Could Redbelly plug into Quant's Overledger?
 
-Short answer: not connected today. A thin link looks possible on paper. Anything deeper needs Quant.
+Not connected today: Overledger's live network list, read with an account, has 59 networks and no Redbelly. A thin link looks possible on paper.
 
-Feasibility research only. No partnership or talks have been announced.
+Feasibility research only. No partnership or talks announced.
 
 ---
 
@@ -30,7 +30,7 @@ https://vine.redbelly.network/environments/
 Unverified wallet: write refused, as designed.
 net_version: not supported.
 Permit2: not deployed.
-Overledger network list: needs an account.
+Overledger network list, read with an account: no Redbelly.
 
 Small items, but an engineer would need to check each.
 

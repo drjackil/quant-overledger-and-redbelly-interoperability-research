@@ -33,8 +33,8 @@
 <main id="main" class="page">
   <p class="eyebrow">Deliverable 3</p>
   <h1>Source list</h1>
-  <p class="lede">49 sources. For each one: what it supports, the exact phrases we rely on, whether the link and phrases were still live at the last check, and where the report cites it.</p>
-  <div class="src-tools"><input id="src-search" type="search" placeholder="Search sources, publishers or quoted phrases" aria-label="Search sources"><span id="src-count" class="mono">49 shown</span></div>
+  <p class="lede">50 sources. For each one: what it supports, the exact phrases we rely on, whether the link and phrases were still live at the last check, and where the report cites it.</p>
+  <div class="src-tools"><input id="src-search" type="search" placeholder="Search sources, publishers or quoted phrases" aria-label="Search sources"><span id="src-count" class="mono">50 shown</span></div>
   <h2 class="src-group">The Clearing House and Quant announcements</h2><div class="src" id="src-S01">
         <div class="src-id">S01</div>
         <div>
@@ -110,7 +110,7 @@
           <p class="src-supports">Self-serve versus managed engagement; six self-serve families; the three self-serve eligibility tests; POST /nodes adds a new network in a supported family; public and private nodes; approved provider domains; engagement for operator-gated chains; new-family effort; node selection; blocked admin methods; network visibility model; live list from GET /networks.</p>
           <span class="status status-ok"><span class="dot"></span>HTTP 200, 16/16 phrases found</span>
           <details><summary>16 quoted phrases checked on the live page</summary><ul><li>Self-serve Connectors for public, permissionless DLT families.</li><li>Six DLT families are available for self-serve onboarding today</li><li>Covers every EVM-compatible chain (Ethereum, Polygon, Arbitrum, Avalanche, …).</li><li>A DLT family is considered eligible for self-serve if (a) its nodes expose RPC or REST over HTTPS, (b) the RPC requires no security factor beyond an API key, and (c) node identity does not matter to other tenants</li><li>The first POST /nodes call registers both the network and your node for it. This new network will then be available for Overledger users.</li><li>If public is selected then the user can only add nodes from whitelisted providers. If private is selected then the user can add nodes from any domain.</li><li>alchemy.com, infura.io, quiknode.pro, chainstack.com, getblock.io, blockdaemon.com, ankr.com</li><li>Required, embedded in the URL path (the Gateway forwards the URL as-is), not a header.</li><li>Health check at registration</li><li>typically permissioned DLTs used by regulated consortia and operator-gated public chains</li><li>if your DLT exposes RPC (or a documented REST equivalent) over HTTP(S) and authenticates with a bearer or API-key factor, Quant can normally onboard it</li><li>Implement a DLT checker (health validation + chain identifer lookup)</li><li>QNT staked against each node</li><li>personal_*, admin_*, txpool_* on EVM</li><li>users explicitly granted by the network owner</li><li>Run GET /networks to retrieve the live list.</li></ul></details>
-          <p class="used">Cited in: Read this first | The answer on one page | Overledger in plain words | Redbelly, in the terms that matter here | What we tested ourselves | Can Redbelly connect now? | What a connection would take | Not possible yet, and unknown | What would change the answer | Glossary</p>
+          <p class="used">Cited in: Read this first | The answer on one page | Overledger in plain words | Redbelly, in the terms that matter here | What we tested ourselves | Account-level checks | Can Redbelly connect now? | What a connection would take | Not possible yet, and unknown | What would change the answer | Glossary</p>
         </div>
       </div><div class="src" id="src-S08">
         <div class="src-id">S08</div>
@@ -121,7 +121,7 @@
           <p class="src-supports">Accounts are created in Quant Connect; API keys authenticate RPC; a leaked API key cannot move funds because transactions still need the caller's own signature.</p>
           <span class="status status-ok"><span class="dot"></span>HTTP 200, 3/3 phrases found</span>
           <details><summary>3 quoted phrases checked on the live page</summary><ul><li>Go to Quant Connect and create an account.</li><li>A leaked API key cannot move funds.</li><li>Blockchain transactions still require a signature from the caller's own wallet private key.</li></ul></details>
-          <p class="used">Cited in: Overledger in plain words | What a connection would take</p>
+          <p class="used">Cited in: Overledger in plain words | Account-level checks | What a connection would take</p>
         </div>
       </div><div class="src" id="src-S09">
         <div class="src-id">S09</div>
@@ -154,7 +154,7 @@
           <p class="src-supports">Fusion is an OP Stack based multi-ledger rollup; its connected networks at testnet launch; bridge contracts deployed on each connected network; four primitives; known bridge risks; firewall locked down on mainnet; deposits final once the connected chain's block has finalized; net_version kept for older wallets and tools.</p>
           <span class="status status-ok"><span class="dot"></span>HTTP 200, 9/9 phrases found</span>
           <details><summary>9 quoted phrases checked on the live page</summary><ul><li>Fusion is built on the standard OP Stack architecture</li><li>Connected DLT networks on testnet launch are: Ethereum Sepolia, Polygon Amoy, Quant's permissioned Besu testnet.</li><li>The bridge and dispute contracts deployed on each connected DLT network. Standard OP Stack contracts, one deployment per chain.</li><li>Bridges carry well-known risks: lock-and-mint mismatches, custodian compromise, oracle failure.</li><li>Merge multiple chain-specific representations of the same underlying asset into a single rollup balance</li><li>locked-down on mainnet, permissive on testnet</li><li>deposits and withdrawals are signed by the user's own keys</li><li>the relevant connected DLT network block has finalized</li><li>Exposed for wallets and tools that predate eth_chainId.</li></ul></details>
-          <p class="used">Cited in: The answer on one page | Overledger in plain words | Redbelly, in the terms that matter here | What we tested ourselves | Can Redbelly connect now? | What a connection would take | Credentials and assets across chains | Not possible yet, and unknown | What would change the answer | Glossary</p>
+          <p class="used">Cited in: The answer on one page | Overledger in plain words | Redbelly, in the terms that matter here | What we tested ourselves | Account-level checks | Can Redbelly connect now? | What a connection would take | Credentials and assets across chains | Not possible yet, and unknown | What would change the answer | Glossary</p>
         </div>
       </div><div class="src" id="src-S12">
         <div class="src-id">S12</div>
@@ -176,7 +176,7 @@
           <p class="src-supports">POST /nodes takes a node URL and a DLT family (EVM among them); public node URLs must come from an approved provider domain with an API key in the path.</p>
           <span class="status status-ok"><span class="dot"></span>HTTP 200, 3/3 phrases found</span>
           <details><summary>3 quoted phrases checked on the live page</summary><ul><li>URL must be from an approved provider domain (for a public node).</li><li>Must include an API key in the path.</li><li>ankr.com</li></ul></details>
-          <p class="used">Cited in: Overledger in plain words | Can Redbelly connect now?</p>
+          <p class="used">Cited in: Overledger in plain words | Account-level checks | Can Redbelly connect now?</p>
         </div>
       </div><div class="src" id="src-S14">
         <div class="src-id">S14</div>
@@ -319,7 +319,7 @@
           <p class="src-supports">Write access is enabled through a specific network smart contract after a passport and biometric check with an accredited issuer.</p>
           <span class="status status-ok"><span class="dot"></span>HTTP 200, 2/2 phrases found</span>
           <details><summary>2 quoted phrases checked on the live page</summary><ul><li>self enable their account with write access to the network through a specific network smart contract</li><li>prove they possess a valid photo identity document (passport) which is verified via biometric checks</li></ul></details>
-          <p class="used">Cited in: Redbelly, in the terms that matter here</p>
+          <p class="used">Cited in: Redbelly, in the terms that matter here | Account-level checks</p>
         </div>
       </div><div class="src" id="src-S27">
         <div class="src-id">S27</div>
@@ -363,7 +363,7 @@
           <p class="src-supports">Averer is the accredited issuer that verifies identity; more accounts can be connected to one identity; Testnet access is offered after verification.</p>
           <span class="status status-ok"><span class="dot"></span>HTTP 200, 3/3 phrases found</span>
           <details><summary>3 quoted phrases checked on the live page</summary><ul><li>Your identity will be verified by an accredited issuer, Averer.</li><li>you will be offered the option to add more accounts which will be connected to your identity</li><li>you will be offered the option to create a Testnet account too</li></ul></details>
-          <p class="used">Cited in: Redbelly, in the terms that matter here | Credentials and assets across chains</p>
+          <p class="used">Cited in: Redbelly, in the terms that matter here | Account-level checks | Credentials and assets across chains</p>
         </div>
       </div><div class="src" id="src-S31">
         <div class="src-id">S31</div>
@@ -572,7 +572,18 @@
           <p class="src-supports">Results of 22 reproducible checks: chain IDs, supported methods, block tags, refusal of an unverified write, presence of common contracts, and Overledger endpoints that need an account.</p>
           <span class="status status-ok"><span class="dot"></span>reproducible: npm run probe</span>
           
-          <p class="used">Cited in: The answer on one page | What we tested ourselves | Can Redbelly connect now? | What a connection would take | Not possible yet, and unknown</p>
+          <p class="used">Cited in: The answer on one page | What we tested ourselves | Account-level checks | Can Redbelly connect now? | What a connection would take | Not possible yet, and unknown</p>
+        </div>
+      </div><div class="src" id="src-S50">
+        <div class="src-id">S50</div>
+        <div>
+          <p class="src-title">Account-level checks through an Overledger account (this report)</p>
+          <p class="src-meta">This report, scripts/overledger-account-probe.mjs, 2026-10-25</p>
+          <a class="src-url" href="evidence/overledger-account-checks.json">evidence/overledger-account-checks.json</a>
+          <p class="src-supports">Results of 5 checks made with an Overledger API key, stages 1: the live network list, and where run, a Redbelly Testnet node used through Overledger.</p>
+          <span class="status status-ok"><span class="dot"></span>reproducible: npm run probe</span>
+          
+          <p class="used">Cited in: The answer on one page | Account-level checks | Can Redbelly connect now? | Not possible yet, and unknown</p>
         </div>
       </div>
 </main>

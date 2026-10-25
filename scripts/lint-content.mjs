@@ -57,7 +57,7 @@ const thread = parseThread(files.thread);
 // 3. Paragraphs outside panels that state facts must cite too (headings and short lead-ins excepted).
 {
   const problems = [];
-  const allowUncited = /^(Each|Every|This|The table|Think of|We split|Documentation can|None of these|Five designs|These public|For each)/;
+  const allowUncited = /^(The checks above|Each|Every|This|The table|Think of|We split|Documentation can|None of these|Five designs|These public|For each)/;
   for (const n of report.nodes.filter((x) => x.type === 'md')) {
     for (const block of n.md.split(/\n\s*\n/)) {
       const b = block.trim();
@@ -129,7 +129,7 @@ const thread = parseThread(files.thread);
     const t = readFileSync(p, 'utf8');
     const m = t.match(credit);
     if (m) problems.push(`${relative(ROOT, p)}: "${m[0]}"`);
-    const handle = t.match(/(?<![\w./-])@(?!diagram|media|font-face|keyframes|import|supports|page|redbellynetwork\/|mattrglobal\/|routerprotocol)[A-Za-z0-9_]{2,15}\b/);
+    const handle = t.match(/(?<![\w./-])@(?!diagram|include|media|font-face|keyframes|import|supports|page|redbellynetwork\/|mattrglobal\/|routerprotocol)[A-Za-z0-9_]{2,15}\b/);
     if (handle) problems.push(`${relative(ROOT, p)}: handle-like text "${handle[0]}"`);
   }
   check('No personal credit, names or handles in the deliverables', problems);

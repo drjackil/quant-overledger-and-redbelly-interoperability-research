@@ -4,7 +4,7 @@
 
 **Why people are asking.** On 24 September 2026 The Clearing House picked Quant to power its On-Chain Money Initiative, a network for US banks to settle tokenised deposits, expected in the first half of 2027 [S01](https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative). Quant's Overledger is the platform its documentation describes for connecting blockchains [S05](https://docs.overledger.dev/docs/start-here).
 
-**Is Redbelly connected today?** No, as far as public sources show. Redbelly is not named in the Overledger documentation we reviewed [S07](https://docs.overledger.dev/docs/connectors) [S11](https://docs.overledger.dev/docs/fusion-rollup), and Overledger's live network list needs an account to read [S49](evidence/live-checks.json).
+**Is Redbelly connected today?** No. Redbelly is not named in the Overledger documentation we reviewed [S07](https://docs.overledger.dev/docs/connectors) [S11](https://docs.overledger.dev/docs/fusion-rollup). We also read Overledger's live network list with an account: 59 networks, all but one of them test networks, and Redbelly is not among them [S50](evidence/overledger-account-checks.json).
 
 **Could it connect?** A thin link looks possible on paper. Overledger lets accounts add new EVM networks themselves [S07](https://docs.overledger.dev/docs/connectors). Redbelly is EVM compatible [S23](https://vine.redbelly.network/consensus/evm-compatibility/), and a Redbelly endpoint is already offered by Ankr, a provider on Overledger's approved list [S07](https://docs.overledger.dev/docs/connectors) [S21](https://vine.redbelly.network/environments/). That would let Overledger read Redbelly and carry transactions that verified Redbelly accounts have signed. It is untested, and Quant decides whether a chain that anyone can read but only verified accounts can write belongs on that self-serve route [S06](https://docs.overledger.dev/docs/overview) [S07](https://docs.overledger.dev/docs/connectors).
 
@@ -16,7 +16,7 @@
 
 **The big caveat: compliance does not travel by default.** Receptor credentials and Tokeniser's rules are checked on Redbelly, at the moment of transfer [S17](https://docs.redbelly.network/pages/methods/proof-by-query/) [S40](https://tokeniser.com/technology). A copy of an asset on another chain follows that chain's rules unless a connection is designed to carry Redbelly's checks with it. The safest pattern is to keep the asset on Redbelly and move instructions, not tokens.
 
-**Still unknown.** How Quant would classify Redbelly, whether Overledger's health check would accept a Redbelly node, whether TCH's bank network would connect to any public chain, and whether Receptor checks can run on other chains.
+**Still unknown.** Whether Overledger's mainnet lists different networks, how Quant would classify Redbelly, whether Overledger's health check would accept a Redbelly node, whether TCH's bank network would connect to any public chain, and whether Receptor checks can run on other chains.
 
 Full report, every source and the scripts to re-check every claim are in the repository.
 
@@ -39,3 +39,4 @@ Full report, every source and the scripts to re-check every claim are in the rep
 - S40: Tokeniser technology. https://tokeniser.com/technology
 - S48: TASK-29 brief: Quant Overledger and Redbelly Interoperability Research. https://taskboard.redbellydao.network/tasks/TASK-29
 - S49: Live checks against Redbelly RPC and the Overledger gateway (this report). evidence/live-checks.json
+- S50: Account-level checks through an Overledger account (this report). evidence/overledger-account-checks.json

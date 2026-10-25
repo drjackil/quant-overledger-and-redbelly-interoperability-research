@@ -3,11 +3,11 @@ title: X thread
 note: Eight posts. Links count as 23 characters on X. Checked by npm run lint.
 ---
 
-1/ Could Redbelly plug into Quant's Overledger? We researched it from public sources only.
+1/ Could Redbelly plug into Quant's Overledger?
 
-Short answer: not connected today. A thin link looks possible on paper. Anything deeper needs Quant.
+Not connected today: Overledger's live network list, read with an account, has 59 networks and no Redbelly. A thin link looks possible on paper.
 
-Feasibility research only. No partnership or talks have been announced.
+Feasibility research only. No partnership or talks announced.
 
 2/ Why now: The Clearing House picked Quant to power its On-Chain Money Initiative, a tokenised deposit network for US banks expected in the first half of 2027.
 
@@ -27,7 +27,7 @@ https://vine.redbelly.network/environments/
 Unverified wallet: write refused, as designed.
 net_version: not supported.
 Permit2: not deployed.
-Overledger network list: needs an account.
+Overledger network list, read with an account: no Redbelly.
 
 Small items, but an engineer would need to check each.
 

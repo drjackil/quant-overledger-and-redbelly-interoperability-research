@@ -27,11 +27,11 @@ Research cut-off: 25 October 2026. Overledger's documentation says the number of
 - Overledger reaches blockchains through Connectors. Public, permissionless networks in six families, EVM among them, can be added self-serve with a single API call. Permissioned, consortium and operator-gated networks go through a managed engagement with Quant's team [S07].
 - Redbelly is EVM compatible (EVM version Prague, Solidity v0.8.30) [S23]. Mainnet is chain ID 151 and Testnet is chain ID 153, each with a public RPC address [S21].
 - Anyone can read Redbelly, but only identity-verified accounts can write. Users claim an access credential from an accredited issuer before they can enable write access [S25]. In our live check, a transaction signed by a new, unverified key was refused on both Mainnet and Testnet with "Sender not authorised to write transactions" [S49].
-- Redbelly is not named in any of the Overledger documentation pages reviewed for this report [S05, S06, S07, S11], and it is not one of the networks Fusion Rollup connected at testnet launch [S11]. Overledger's live network list needs an account to read [S49].
+- Redbelly is not named in any of the Overledger documentation pages reviewed for this report [S05, S06, S07, S11], and it is not one of the networks Fusion Rollup connected at testnet launch [S11]. Overledger's live network list needs an account to read [S49]. Read with an account on 25 October 2026, the list on the documented gateway held 59 networks, and none of them is Redbelly by name, RPC host or chain ID [S50].
 :::
 
 ::: analysis
-**Redbelly is not connected to Overledger today, as far as public sources show.** A thin link, where an Overledger account registers a Redbelly RPC endpoint and passes already-signed transactions through, looks possible on paper. Redbelly speaks the EVM family's language [S23], a Redbelly endpoint is already offered by a provider on Overledger's approved list [S07, S21], and Overledger lets accounts add new EVM networks [S07]. It is untested, and it depends on one decision only Quant can make: whether a chain where anyone can read but only verified accounts can write belongs on the self-serve route, or needs an engagement. Overledger's own glossary calls that model "public permissioned" [S06].
+**Redbelly is not connected to Overledger today.** A thin link, where an Overledger account registers a Redbelly RPC endpoint and passes already-signed transactions through, looks possible on paper. Redbelly speaks the EVM family's language [S23], a Redbelly endpoint is already offered by a provider on Overledger's approved list [S07, S21], and Overledger lets accounts add new EVM networks [S07]. It is untested, and it depends on one decision only Quant can make: whether a chain where anyone can read but only verified accounts can write belongs on the self-serve route, or needs an engagement. Overledger's own glossary calls that model "public permissioned" [S06].
 
 Anything deeper, such as Quant-held signing, Flow App workflows, or moving assets through Fusion Rollup, is **not possible yet** unless Quant chooses to support Redbelly. And Redbelly's compliance controls would **not follow an asset to another chain by default**. A connection would have to be designed to carry them.
 :::
@@ -46,7 +46,7 @@ We split "connect" into four levels, because each one needs different work and d
 | 2. Pass-through | Overledger carries a transaction that a verified Redbelly account has already signed | [[part:Possible on paper, untested]] | Level 1, plus every sending address holding Redbelly write access [S25, S49] |
 | 3. Orchestrate | Overledger tools act on Redbelly: Flow Apps, Quant-held signing, event trackers | [[no:Not possible yet]] | Quant adding Redbelly to those tools, and verified signing addresses [S09, S12] |
 | 4. Move | Assets or messages travel between Redbelly and other chains through Overledger | [[no:Not possible yet]] | A Quant-led project to wire Redbelly into Fusion Rollup or a bridge flow [S11] |
-| Shared listing | Redbelly appears in Overledger's network list for every user | [[unk:Unknown]] | The list is only visible with an account [S49] |
+| Shared listing | Redbelly appears in Overledger's network list | [[no:Not listed]] | Checked with an account: 59 networks, Redbelly not among them [S50] |
 | Bank network reach | Banks on TCH's On-Chain Money network reach Redbelly assets | [[unk:Unknown]] | TCH and its banks; no ledger or public chain link has been announced [S01, S03] |
 | Compliance carried across | Receptor and Tokeniser rules still apply after an asset leaves Redbelly | [[no:Not by default]] | How a connection is designed (see [Credentials and assets across chains](#compliance)) |
 
@@ -163,7 +163,35 @@ Documentation can be out of date, so we checked the parts we could check without
 | Permit2 at its usual address | Not deployed [S49] | Overledger's x402 payment gates use Permit2 on EVM [S12]. |
 | Multicall3 and the CREATE2 deployer | Deployed [S49] | Present at their usual addresses, so tools that look for them there will find them. |
 | Overledger `GET /health` | Public, HTTP 200 [S49] | The gateway named in the docs is live. |
-| Overledger `GET /networks` and `/networks/fusion` | HTTP 401 without an account [S49] | Whether Redbelly is already listed cannot be checked publicly. |
+| Overledger `GET /networks` and `/networks/fusion` | HTTP 401 without an account [S49] | The list cannot be read publicly. We read it with an account, see [Account-level checks](#account-checks). |
+:::
+
+## Account-level checks {#account-checks}
+
+The checks above use public access only. Three further checks need access that a public researcher does not have, so they are packaged as a script for someone who holds it.
+
+::: confirmed
+- **Reading the live network list needs an Overledger account.** The list is returned by `GET /networks` [S07], which answers HTTP 401 without credentials [S49]. An account is created in Quant Connect, which issues the API key [S08].
+- **Registering a node can create a shared network entry.** For a network Overledger does not list yet, "the first POST /nodes call registers both the network and your node for it", and the new network "will then be available for Overledger users" [S07]. The published API reference for `POST /nodes` lists the node URL, network, name and family, and describes public node rules [S13]. The public or private choice is described for the Quant Connect form [S07].
+- **Completing a Redbelly transaction needs a verified address.** That means a passport check with biometrics through an accredited issuer, Averer, before write access is enabled [S26, S30].
+:::
+
+::: analysis
+For those reasons this report does not register a public Redbelly network on Overledger: doing so would make an entry visible to other Overledger users, which could be read as a listing. The script is built to stay on the safe side of that line. Stage 1 only reads. Stage 2 uses Redbelly Testnet, prefers a node made private in the Quant Connect form, and deletes the node at the end. Stage 3 sends one zero-value transfer from the operator's own verified testnet address. API keys and private keys are never stored.
+:::
+
+@include(account-checks)
+
+::: confirmed
+- **The live list.** 59 networks were visible to the account: 54 in the EVM family, and one each for Solana, SUI, Aptos, Hedera and Canton [S50]. That covers five of the six self-serve families in the documentation; no Cosmos network was listed [S07, S50].
+- **Mostly test networks.** Apart from Quant's Canton private network, which is marked permissioned, every entry is a test network such as Ethereum Sepolia, Base Sepolia or Avalanche Fuji, and the documented gateway itself is a testnet environment [S50].
+- **No Redbelly.** Searching every field of every entry for "redbelly", "rbnt", Redbelly's RPC host, and chain IDs 151, 152 and 153 found nothing [S50].
+- **Fusion's base chains.** Fusion Rollup lists three connected networks: Quant Private Network (chain ID 7695), Ethereum Sepolia and Amoy [S50]. That matches the documentation's three base chains at testnet launch [S11].
+- **Field names differ from the documented model.** The live entries use `displayName` and `dltType`, where the documented network model uses `name` and `type` [S07, S50].
+:::
+
+::: analysis
+The listed set shows how varied the EVM chains are that Overledger already reaches on testnet, from rollups such as zkSync, Scroll and Linea to separate layer 1 chains such as Avalanche, Sei and Monad [S50]. That makes it more plausible that an EVM chain with Redbelly's differences could pass the EVM checker, but it is not a test of Redbelly. The list we read is the testnet environment, so it says nothing about Overledger's mainnet. The stage 2 node test would answer the health check question directly; it was not run because registering a new network on the shared gateway could create an entry other users can see [S07].
 :::
 
 ## Can Redbelly connect now? {#connect-now}
@@ -204,7 +232,7 @@ Neither changes Redbelly's rule that only verified accounts can write. Overledge
 - Whether Overledger's EVM health check passes against Redbelly. It is described only as "health validation + chain identifer lookup" [S07]. Redbelly does not serve `net_version` and returns an older block for the `safe` tag [S49]. Either could matter, or neither.
 - Whether a key-bearing Ankr URL for Redbelly exists in the form Overledger expects. Ankr's keyless endpoint works [S49]; the keyed form was not tested.
 - Whether Quant would let a write-gated chain be created through self-serve at all.
-- Whether Redbelly already appears in the live `GET /networks` list, which needs an account [S49].
+- Whether the mainnet environment lists different networks. The list we read came from the testnet gateway named in the documentation [S50].
 :::
 
 ### Route B: managed engagement {#engagement}
@@ -352,7 +380,7 @@ Five designs follow from the facts above. They are options for discussion, not r
 ::: confirmed
 **Not possible yet, based on public sources at the cut-off:**
 
-- Relying on documented Overledger support for Redbelly. None of the Overledger documentation reviewed names Redbelly [S05, S06, S07, S11]. Whether the account-only network list includes it is unknown (see below).
+- Using Redbelly as a listed Overledger network. None of the Overledger documentation reviewed names Redbelly [S05, S06, S07, S11], and the live network list read with an account does not include it [S50].
 - Connecting Redbelly to Fusion Rollup. It is not among Fusion's connected networks, and no self-serve route is documented [S11].
 - Sending a Redbelly transaction from an unverified address by any route, Overledger included [S25, S49].
 - Using Overledger's Permit2-based payment gates on Redbelly without first deploying Permit2 [S12, S49].
@@ -363,7 +391,7 @@ Five designs follow from the facts above. They are options for discussion, not r
 
 - How Quant would classify Redbelly: self-serve or managed engagement [S06, S07].
 - Whether Overledger's EVM health check accepts a Redbelly node [S07, S49].
-- Whether Redbelly already appears in the live `GET /networks` list. Checking needs an account [S49].
+- Whether the live network list differs on Overledger's mainnet environment or for other accounts [S07, S50].
 - Whether Quant-held signing keys could be Redbelly-verified, and under whose identity [S09, S25].
 - Whether TCH's On-Chain Money network will connect to any public chain [S01].
 - Whether Receptor verification can run on other chains.
@@ -390,7 +418,7 @@ These public signals would move items from "unknown" to "confirmed". They are th
 - **Checking every claim.** For each source we recorded the exact phrases that support our claims, {{QUOTE_COUNT}} in total. `npm run verify:sources` loads every link and confirms each phrase is still on the page. On {{SOURCE_CHECK_DATE}} all {{SOURCE_COUNT}} external links loaded and every phrase was found.
 - **Checking the text.** `npm run lint` checks that every confirmed panel cites a source, that every citation points to a listed source, and that the text contains no partnership wording, no price talk, no personal credit, and no dashes or emoji outside the brand rules.
 - **Live checks.** `npm run probe` repeats the {{PROBE_COUNT}} checks in [What we tested ourselves](#live-checks). It uses no credentials and cannot move funds.
-- **What we did not do.** We did not open an Overledger account, call authenticated Overledger endpoints, register a node or write any successful transaction. Every statement about how Overledger would behave with Redbelly is analysis, not a test result.
+- **Checks that need access.** Reading Overledger's live network list, sending calls through Overledger to a Redbelly node, and completing a Redbelly transaction need an Overledger account and a Redbelly-verified address. They are packaged as `npm run probe:account`. Stage 1, the read-only network list check, was run with an Overledger account on 25 October 2026 and its results are in [Account-level checks](#account-checks). Stages 2 and 3 were not run, so every statement about how Overledger would behave with a Redbelly node is analysis, not a test result.
 - **Vendor material.** Descriptions from Quant, Redbelly, Tokeniser and bridge providers are their own. We report what they say and label anything beyond that as analysis.
 - **Neutrality.** This report takes no view on whether a connection should happen. It contains no price discussion and no investment advice.
 
