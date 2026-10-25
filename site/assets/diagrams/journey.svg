@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" role="img" aria-labelledby="jy-t jy-d" class="dg dg-journey">
   <title id="jy-t">Where compliance checks run</title>
-  <desc id="jy-d">On Redbelly, a Receptor proof is checked by a verifier contract, Tokeniser rules are checked at every transfer, and only verified accounts can write. Once an asset is copied to another chain through a connection or bridge, that chain's own rules apply. Four break points: who may hold it, transfers out of Redbelly's sight, eligibility that goes stale, and coming back to an unverified address.</desc>
+  <desc id="jy-d">Left side: on Redbelly a verifier contract checks Receptor proofs, Tokeniser checks every transfer, and only verified accounts write. Once an asset is copied to another chain through a connection or bridge, that chain's own rules apply. Four break points: who may hold it, transfers out of Redbelly's sight, eligibility that goes stale, and coming back to an unverified address.</desc>
   <rect class="dg-frame dg-frame-home" x="24" y="24" width="388" height="316" rx="8"/>
   <text class="dg-mono" x="44" y="54">ON REDBELLY</text>
   <g class="dg-step" style="--i:0"><rect class="dg-card" x="44" y="72" width="348" height="58" rx="4"/><circle class="dg-dot-ok" cx="64" cy="101" r="6"/>

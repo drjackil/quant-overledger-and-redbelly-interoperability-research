@@ -57,7 +57,7 @@ const thread = parseThread(files.thread);
 // 3. Paragraphs outside panels that state facts must cite too (headings and short lead-ins excepted).
 {
   const problems = [];
-  const allowUncited = /^(The checks above|Each|Every|This|The table|Think of|We split|Documentation can|None of these|Five designs|These public|For each)/;
+  const allowUncited = /^(This document|Each finding|"Connected" can|A useful picture|Documentation can drift|Some questions can|Below, each|Here is the work|This part looks|Two observations|The checks above|Each|Every|This|The table|Think of|We split|Documentation can|None of these|Five designs|These public|For each)/;
   for (const n of report.nodes.filter((x) => x.type === 'md')) {
     for (const block of n.md.split(/\n\s*\n/)) {
       const b = block.trim();
@@ -151,7 +151,7 @@ const thread = parseThread(files.thread);
 // 10. The community summary carries the notice and cites its facts.
 {
   const problems = [];
-  if (!/no announced partnership or talks/i.test(files.summary)) problems.push('summary lacks the no-partnership notice');
+  if (!/no announced partnership or talks|no partnership or talks between redbelly and quant have been announced/i.test(files.summary)) problems.push('summary lacks the no-partnership notice');
   if (citedIds(files.summary).size < 8) problems.push('summary cites fewer than 8 sources');
   check('Community summary carries the notice and cites its facts', problems);
 }

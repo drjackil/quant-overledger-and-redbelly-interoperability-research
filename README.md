@@ -1,18 +1,18 @@
 # Quant Overledger and Redbelly Interoperability Research
 
-Feasibility research for the Redbelly DAO Community Task Board, **TASK-29**. It answers three questions from public sources: could Redbelly Network connect to Quant's Overledger, what would that take, and what could it offer institutions that use Redbelly. It also explains how Receptor credentials and Tokeniser assets would behave across chains, and where compliance could break.
+Submission for **TASK-29** on the Redbelly DAO Community Task Board. Using public evidence it asks three things: could Redbelly Network connect to Quant's Overledger, what would that take, and what could it offer institutions that use Redbelly. It also explains how Receptor credentials and Tokeniser assets would behave across chains, and where compliance could break.
 
-> **Notice.** Redbelly and Quant have no announced partnership or talks, and nothing in this repository suggests otherwise. Redbelly has not published an official position on bridging, so anything not in a public source is treated as unknown. No price talk, no investment advice.
+> **Notice.** No partnership or talks between Redbelly and Quant have been announced, and nothing here implies any. Redbelly has no public stance on bridging, so points without a public source are marked unknown. No price talk, no investment advice.
 
 ## The answer in brief
 
-- **Not connected today.** Redbelly is not named in the Overledger documentation reviewed. Read with an account on 25 October 2026, Overledger's live network list held 59 networks (all but one of them test networks) and none of them is Redbelly.
+- **No connection today.** Overledger's documentation never mentions Redbelly. Read with an account on 25 October 2026, Overledger's live network list held 59 networks (all but one of them test networks) and none of them is Redbelly.
 - **A thin link looks possible on paper, and is untested.** Overledger lets accounts add new EVM networks through self-serve. Redbelly is EVM compatible, and Ankr, a provider on Overledger's approved list, already serves Redbelly Mainnet. Quant decides whether a chain that anyone can read but only verified accounts can write belongs on that route.
 - **Anything deeper needs Quant.** Quant-held signing, Flow App workflows and moving assets through Fusion Rollup are not possible yet.
-- **Compliance does not travel by default.** Receptor proofs and Tokeniser transfer rules are checked on Redbelly. A copy elsewhere follows that chain's rules unless a connection is designed to carry them.
+- **The rules stay on Redbelly.** Receptor and Tokeniser enforce their checks on Redbelly. A copy on another chain obeys that chain instead, unless the link carries the checks across.
 - **Small, concrete gaps found by live checks:** Redbelly does not serve `net_version`, its `safe` block tag lags `finalized`, Permit2 is not deployed, and an unverified sender is refused as designed.
 
-Every claim behind these lines is linked to its source in the report and the source list.
+The report and the source list link each of these points to its evidence.
 
 ## Deliverables
 

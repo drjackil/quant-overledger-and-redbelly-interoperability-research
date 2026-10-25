@@ -9,7 +9,7 @@ Not connected today: Overledger's live network list, read with an account, has 5
 
 Feasibility research only. No partnership or talks announced.
 
-2/ Why now: The Clearing House picked Quant to power its On-Chain Money Initiative, a tokenised deposit network for US banks expected in the first half of 2027.
+2/ Why it came up: The Clearing House chose Quant for the interoperability layer of its On-Chain Money Initiative, a tokenised deposit network for US banks due in the first half of 2027.
 
 https://www.theclearinghouse.org/payment-systems/Articles/2026/09/The-Clearing-House-Partners-with-Quant-to-Advance-the--On-Chain-Money-Initiative
 
@@ -37,7 +37,7 @@ Safest pattern: keep the asset on Redbelly, move instructions.
 
 https://tokeniser.com/technology
 
-7/ Still unknown: how Quant would classify Redbelly, whether Overledger's health check accepts a Redbelly node, whether the bank network would touch any public chain, and whether Receptor checks can run elsewhere.
+7/ Open questions: which onboarding route Quant would assign Redbelly, whether Overledger's node health check would pass, whether TCH's bank network will ever link to a public chain, and whether Receptor checks could run on other chains.
 
 8/ Every claim in the report links to its source, and the repository includes scripts that re-check every link, every quoted phrase and every live test.
 

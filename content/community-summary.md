@@ -1,23 +1,23 @@
 ---
-title: Could Redbelly plug into Quant's Overledger? The short version
+title: Redbelly and Quant's Overledger, in plain words
 ---
 
-**This is feasibility research, not news.** Redbelly and Quant have no announced partnership or talks [S48]. Redbelly has not published a position on bridging [S48]. Nothing here is a plan, a prediction or investment advice.
+**Research, not an announcement.** No partnership or talks between Redbelly and Quant have been announced [S48], and Redbelly has not published a view on bridging [S48]. What follows is not a plan, not a forecast and not investment advice.
 
-**Why people are asking.** On 24 September 2026 The Clearing House picked Quant to power its On-Chain Money Initiative, a network for US banks to settle tokenised deposits, expected in the first half of 2027 [S01]. Quant's Overledger is the platform its documentation describes for connecting blockchains [S05].
+**Why the topic came up.** In September 2026 The Clearing House chose Quant to run the interoperability layer of its On-Chain Money Initiative, a tokenised deposit network for US banks that TCH expects to open in the first half of 2027 [S01]. Of Quant's products, Overledger is the one documented for attaching blockchains [S05].
 
-**Is Redbelly connected today?** No. Redbelly is not named in the Overledger documentation we reviewed [S07, S11]. We also read Overledger's live network list with an account: 59 networks, all but one of them test networks, and Redbelly is not among them [S50].
+**Is Redbelly on Overledger now?** No. Overledger's documentation never mentions Redbelly [S07, S11]. We also logged in with an Overledger account and read the live network list: 59 networks, nearly all of them test networks, and no Redbelly among them [S50].
 
-**Could it connect?** A thin link looks possible on paper. Overledger lets accounts add new EVM networks themselves [S07]. Redbelly is EVM compatible [S23], and a Redbelly endpoint is already offered by Ankr, a provider on Overledger's approved list [S07, S21]. That would let Overledger read Redbelly and carry transactions that verified Redbelly accounts have signed. It is untested, and Quant decides whether a chain that anyone can read but only verified accounts can write belongs on that self-serve route [S06, S07].
+**Could it be added?** Possibly, at the simplest level. Any Overledger account may add a new EVM network on its own [S07], Redbelly runs the EVM [S23], and Ankr, one of Overledger's approved node providers, already hosts a Redbelly endpoint [S07, S21]. That would let Overledger read Redbelly and forward transactions that verified Redbelly users have signed themselves. Nobody has tried it yet, and Quant decides whether a chain where anyone can read but only verified users can write belongs on that self-service route [S06, S07].
 
-**What we found when we tested.** Redbelly refused a transaction from a new, unverified wallet, as designed [S49]. It does not support `net_version`, a method Overledger keeps for older wallets and tools [S11], and Permit2, which Overledger's payment feature relies on, is not deployed on Redbelly [S49, S12]. These are small, concrete items an engineer would need to check.
+**What our tests turned up.** A transaction from a fresh, unverified wallet was rejected, which is how Redbelly is meant to work [S49]. Redbelly does not answer `net_version`, a method Overledger keeps for older wallets and tools [S11], and Permit2, which Overledger's payment feature needs, is not deployed on Redbelly [S49, S12]. Each of these is a small item an engineer would have to look at.
 
-**What would take Quant's involvement.** Quant-held signing, Overledger workflows and moving assets through Quant's Fusion Rollup all need Quant to support Redbelly [S09, S11, S12]. None of that is possible today.
+**What only Quant can unlock.** Keys held by Quant, Overledger's workflow apps and moving value through Quant's Fusion Rollup would all need Quant to support Redbelly first [S09, S11, S12]. None of them works today.
 
-**What it could offer institutions.** One integration point for institutions already using Overledger [S05], and workflows that tie a step on Redbelly to steps elsewhere [S12, S14]. Redbelly's own properties, such as verified counterparties, fast deterministic finality and fees fixed in US dollar terms, would stay the same [S22, S24, S25].
+**What institutions could get.** Teams already on Overledger would reach Redbelly through the login and API they already use [S05], and could make a step on another network wait for an event on Redbelly [S12, S14]. Redbelly's strengths, namely verified counterparties, final settlement within seconds and fees fixed in US dollars, would not change [S22, S24, S25].
 
-**The big caveat: compliance does not travel by default.** Receptor credentials and Tokeniser's rules are checked on Redbelly, at the moment of transfer [S17, S40]. A copy of an asset on another chain follows that chain's rules unless a connection is designed to carry Redbelly's checks with it. The safest pattern is to keep the asset on Redbelly and move instructions, not tokens.
+**The main warning: the rules stay on Redbelly.** Receptor credentials and Tokeniser's rules are enforced on Redbelly when an asset moves [S17, S40]. If a copy of the asset is created elsewhere, that chain's rules apply instead, unless the link is built to carry Redbelly's checks along. The lowest-risk pattern keeps the asset on Redbelly and sends only instructions.
 
-**Still unknown.** Whether Overledger's mainnet lists different networks, how Quant would classify Redbelly, whether Overledger's health check would accept a Redbelly node, whether TCH's bank network would connect to any public chain, and whether Receptor checks can run on other chains.
+**Still open.** Whether Overledger's mainnet shows a different list, how Quant would classify Redbelly, whether Overledger's node health check would accept Redbelly, whether TCH's bank network will ever link to a public chain, and whether Receptor checks could run on other chains.
 
-Full report, every source and the scripts to re-check every claim are in the repository.
+The full study, every source and the scripts that re-check each claim are in the repository.

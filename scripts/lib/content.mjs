@@ -29,7 +29,7 @@ export const PANEL_LABELS = {
 export const STATUS_LABELS = { ok: 'meets', part: 'partial', no: 'no', unk: 'unknown' };
 
 export const DIAGRAMS = {
-  levels: 'Figure 1. Four levels of connection, and who would have to act at each one.',
+  levels: 'Figure 1. The connection ladder: four rungs, and who can unlock each one.',
   stack: 'Figure 2. How Overledger is put together, from its public documentation. Redbelly is not a listed network.',
   routes: 'Figure 3. The three documented ways a chain reaches Overledger, and how Redbelly fits each one.',
   journey: 'Figure 4. Where Redbelly\'s compliance checks run, and where they could break once an asset leaves.'

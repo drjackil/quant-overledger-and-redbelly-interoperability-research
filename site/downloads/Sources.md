@@ -17,7 +17,7 @@ Quoted phrases checked on the live page:
 - "Announced in June"
 - "expected to become available to participating institutions in the first half of 2027"
 
-Cited in: The answer on one page; Why the question is being asked now; What it could offer institutions; Not possible yet, and unknown; What would change the answer; Glossary
+Cited in: The verdict in sixty seconds; Where this question comes from; What institutions would gain; Hard stops and open questions; What would change the answer; Glossary
 
 **S02. The Clearing House Partners with Quant to Advance the On-Chain Money Initiative (Quant press release)**  
 Quant, 2026-09-24  
@@ -29,7 +29,7 @@ Quoted phrases checked on the live page:
 - "interoperability, orchestration, and transaction-management layer"
 - "first half of 2027"
 
-Cited in: Why the question is being asked now
+Cited in: Where this question comes from
 
 **S03. Quant powers The Clearing House's On-Chain Money Initiative in the US**  
 Quant, 2026-09-24  
@@ -41,7 +41,7 @@ Quoted phrases checked on the live page:
 - "Quant will serve as the commercial solution for bank-side tokenised deposits for any US financial institution that processes through The Clearing House but does not yet have tokenised deposit capability"
 - "Today, tokenised deposits mostly live in walled gardens"
 
-Cited in: The answer on one page; Why the question is being asked now; What it could offer institutions
+Cited in: The verdict in sixty seconds; Where this question comes from; What institutions would gain
 
 **S04. Major Financial Institutions Unveil Bank-Led On-Chain Money Initiative**  
 The Clearing House, 2026-06-05  
@@ -53,7 +53,7 @@ Quoted phrases checked on the live page:
 - "will be operated by The Clearing House"
 - "a connectivity layer linking blockchain-based activity with established fiat rails, such as the RTP® and CHIPS® networks"
 
-Cited in: Why the question is being asked now; What it could offer institutions
+Cited in: Where this question comes from; What institutions would gain
 
 ## Quant Overledger documentation and API reference
 
@@ -67,7 +67,7 @@ Quoted phrases checked on the live page:
 - "Flow Applications turn multi-step business logic (signing, smart-contract deployment, compliance check, payment, …) into typed sessions"
 - "customers and partners can host their own Flow Applications externally and register them with the Gateway"
 
-Cited in: The answer on one page; Why the question is being asked now; Overledger in plain words; What it could offer institutions; Credentials and assets across chains; Not possible yet, and unknown; Glossary
+Cited in: The verdict in sixty seconds; Where this question comes from; How Overledger works; What institutions would gain; Compliance across chains; Hard stops and open questions; Glossary
 
 **S06. Overview (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -82,7 +82,7 @@ Quoted phrases checked on the live page:
 - "Each Connector integrates with a pool of nodes for its DLT family: Quant-operated nodes that ship by default, plus customer-attached nodes that your account can register"
 - "The policies of the Fusion Firewall are mirrored on-chain inside the rollup and on each connected L1."
 
-Cited in: The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; Can Redbelly connect now?; Credentials and assets across chains; Not possible yet, and unknown; Glossary
+Cited in: The verdict in sixty seconds; How Overledger works; Redbelly's profile; Door by door: can Redbelly get in today?; Compliance across chains; Hard stops and open questions; Glossary
 
 **S07. Connectors (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -107,7 +107,7 @@ Quoted phrases checked on the live page:
 - "users explicitly granted by the network owner"
 - "Run GET /networks to retrieve the live list."
 
-Cited in: Read this first; The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; What we tested ourselves; Account-level checks; Can Redbelly connect now?; What a connection would take; Not possible yet, and unknown; What would change the answer; Glossary
+Cited in: Before you read; The verdict in sixty seconds; How Overledger works; Redbelly's profile; Field tests without an account; Tests with an Overledger account; Door by door: can Redbelly get in today?; The build list; Hard stops and open questions; What would change the answer; Glossary
 
 **S08. Authentication (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -119,7 +119,7 @@ Quoted phrases checked on the live page:
 - "A leaked API key cannot move funds."
 - "Blockchain transactions still require a signature from the caller's own wallet private key."
 
-Cited in: Overledger in plain words; Account-level checks; What a connection would take
+Cited in: How Overledger works; Tests with an Overledger account; The build list
 
 **S09. Signing (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -132,7 +132,7 @@ Quoted phrases checked on the live page:
 - "ECDSA on secp256k1"
 - "sign locally and submit through /rpc/{apiKey} or the Connectors RPC"
 
-Cited in: The answer on one page; Overledger in plain words; What a connection would take; What it could offer institutions; Credentials and assets across chains; Not possible yet, and unknown; Glossary
+Cited in: The verdict in sixty seconds; How Overledger works; The build list; What institutions would gain; Compliance across chains; Hard stops and open questions; Glossary
 
 **S10. Overledger Firewall (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -145,7 +145,7 @@ Quoted phrases checked on the live page:
 - "Overledger maintains the binding between each user and their authorised on-chain address(es) off-chain"
 - "Token allowlist entries are governance-controlled (Quant Safe signers), not per-deployer"
 
-Cited in: Overledger in plain words; Redbelly, in the terms that matter here; What a connection would take; What it could offer institutions; Credentials and assets across chains
+Cited in: How Overledger works; Redbelly's profile; The build list; What institutions would gain; Compliance across chains
 
 **S11. Fusion Rollup (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -163,7 +163,7 @@ Quoted phrases checked on the live page:
 - "the relevant connected DLT network block has finalized"
 - "Exposed for wallets and tools that predate eth_chainId."
 
-Cited in: The answer on one page; Overledger in plain words; Redbelly, in the terms that matter here; What we tested ourselves; Account-level checks; Can Redbelly connect now?; What a connection would take; Credentials and assets across chains; Not possible yet, and unknown; What would change the answer; Glossary
+Cited in: The verdict in sixty seconds; How Overledger works; Redbelly's profile; Field tests without an account; Tests with an Overledger account; Door by door: can Redbelly get in today?; The build list; Compliance across chains; Hard stops and open questions; What would change the answer; Glossary
 
 **S12. Flow Apps (Overledger documentation)**  
 Quant, accessed 2026-10-25  
@@ -178,7 +178,7 @@ Quoted phrases checked on the live page:
 - "implemented on EVM via Uniswap's Permit2 for on-chain settlement"
 - "receive HTTP POST callbacks signed with HMAC-SHA256"
 
-Cited in: The answer on one page; Overledger in plain words; What we tested ourselves; What a connection would take; What it could offer institutions; Credentials and assets across chains; Not possible yet, and unknown; Glossary
+Cited in: The verdict in sixty seconds; How Overledger works; Field tests without an account; The build list; What institutions would gain; Compliance across chains; Hard stops and open questions; Glossary
 
 **S13. Register a new DLT node (Overledger API reference)**  
 Quant, accessed 2026-10-25  
@@ -190,7 +190,7 @@ Quoted phrases checked on the live page:
 - "Must include an API key in the path."
 - "ankr.com"
 
-Cited in: Overledger in plain words; Account-level checks; Can Redbelly connect now?
+Cited in: How Overledger works; Tests with an Overledger account; Door by door: can Redbelly get in today?
 
 **S14. Subscribe to a specific contract event signature (Overledger API reference)**  
 Quant, accessed 2026-10-25  
@@ -202,7 +202,7 @@ Quoted phrases checked on the live page:
 - "callbackUrl"
 - "networkId"
 
-Cited in: Overledger in plain words; What a connection would take; What it could offer institutions
+Cited in: How Overledger works; The build list; What institutions would gain
 
 ## Redbelly Network documentation
 
@@ -215,7 +215,7 @@ Quoted phrases checked on the live page:
 - "The Redbelly Network is a layer 1 blockchain, built and optimised for real world asset tokenisation."
 - "a scalable EVM implementation"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 **S16. Receptor (Redbelly documentation)**  
 Redbelly Network, accessed 2026-10-25  
@@ -228,7 +228,7 @@ Quoted phrases checked on the live page:
 - "the Issuer, the Holder, and the Verifier"
 - "Redbelly ensures that all issuers who provide network access are accredited"
 
-Cited in: Credentials and assets across chains; What would change the answer; Glossary
+Cited in: Compliance across chains; What would change the answer; Glossary
 
 **S17. Proof by Query (Redbelly documentation)**  
 Redbelly Network, accessed 2026-10-25  
@@ -240,7 +240,7 @@ Quoted phrases checked on the live page:
 - "is never seen or stored by the Verifier"
 - "credentialAtomicQuerySigV2OnChain.circom"
 
-Cited in: Credentials and assets across chains; What would change the answer; Glossary
+Cited in: Compliance across chains; What would change the answer; Glossary
 
 **S18. Selective Disclosure (Redbelly documentation)**  
 Redbelly Network, accessed 2026-10-25  
@@ -251,7 +251,7 @@ Quoted phrases checked on the live page:
 - "Selective Disclosure involves using credentials that implement BBS+ signatures."
 - "it can only be used off-chain"
 
-Cited in: Credentials and assets across chains
+Cited in: Compliance across chains
 
 **S19. Eligibility SDK overview (Redbelly documentation)**  
 Redbelly Network, accessed 2026-10-25  
@@ -263,7 +263,7 @@ Quoted phrases checked on the live page:
 - "did:receptor:redbelly:mainnet:31AAH8sSaGd6fpnG1TcB6yQ4UZnNeyHzTk5aM2P7rjv"
 - "did:receptor:redbelly:testnet:31K82iKCtE6ciDc7oAr3T5EpjZb4S1EFM7c4xJaWkM2"
 
-Cited in: Credentials and assets across chains
+Cited in: Compliance across chains
 
 **S20. Configure Eligibility Criteria (Redbelly documentation)**  
 Redbelly Network, accessed 2026-10-25  
@@ -277,7 +277,7 @@ Quoted phrases checked on the live page:
 - "AMLCTFCredential"
 - "Verifiers should keep revocation checks enabled for production and mainnet flows"
 
-Cited in: Credentials and assets across chains
+Cited in: Compliance across chains
 
 **S21. Redbelly Network environments (Vine developer portal)**  
 Redbelly Network, accessed 2026-10-25  
@@ -291,7 +291,7 @@ Quoted phrases checked on the live page:
 - "https://rpc.ankr.com/redbelly_mainnet"
 - "Uniblock requires an API key on the x-api-key header for this endpoint."
 
-Cited in: The answer on one page; Redbelly, in the terms that matter here; What we tested ourselves; Can Redbelly connect now?; What a connection would take; What would change the answer
+Cited in: The verdict in sixty seconds; Redbelly's profile; Field tests without an account; Door by door: can Redbelly get in today?; The build list; What would change the answer
 
 **S22. DBFT and super block: security, finality and scalability (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -304,7 +304,7 @@ Quoted phrases checked on the live page:
 - "transactions can be deterministically finalised in a matter of seconds"
 - "Redbelly blockchain cannot fork"
 
-Cited in: Redbelly, in the terms that matter here; What we tested ourselves; What it could offer institutions
+Cited in: Redbelly's profile; Field tests without an account; What institutions would gain
 
 **S23. EVM compatibility (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -316,7 +316,7 @@ Quoted phrases checked on the live page:
 - "Prague"
 - "v0.8.30"
 
-Cited in: The answer on one page; Redbelly, in the terms that matter here; Glossary
+Cited in: The verdict in sixty seconds; Redbelly's profile; Glossary
 
 **S24. Network fees (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -328,7 +328,7 @@ Quoted phrases checked on the live page:
 - "The gas model ensures that a simple native transaction on Redbelly costs US$0.01."
 - "Redbelly implements an on chain, distributed oracle solution"
 
-Cited in: Redbelly, in the terms that matter here; What a connection would take; What it could offer institutions
+Cited in: Redbelly's profile; The build list; What institutions would gain
 
 **S25. Identity and participation on the network (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -339,7 +339,7 @@ Quoted phrases checked on the live page:
 - "all network participants MUST prove they are who they say they are before gaining access"
 - "Before users can self-enable their accounts with write access to the network, they must claim an access credential from a network accredited issuer."
 
-Cited in: The answer on one page; Redbelly, in the terms that matter here; Can Redbelly connect now?; What a connection would take; What it could offer institutions; Credentials and assets across chains; Not possible yet, and unknown
+Cited in: The verdict in sixty seconds; Redbelly's profile; Door by door: can Redbelly get in today?; The build list; What institutions would gain; Compliance across chains; Hard stops and open questions
 
 **S26. User access (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -350,7 +350,7 @@ Quoted phrases checked on the live page:
 - "self enable their account with write access to the network through a specific network smart contract"
 - "prove they possess a valid photo identity document (passport) which is verified via biometric checks"
 
-Cited in: Redbelly, in the terms that matter here; Account-level checks
+Cited in: Redbelly's profile; Tests with an Overledger account
 
 **S27. Accredited issuers (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -362,7 +362,7 @@ Quoted phrases checked on the live page:
 - "0x2d68f1C50a057a310EeF28DF3199F95A65cE4ac5"
 - "For businesses at least one officeholder must have onboarded as a user"
 
-Cited in: Redbelly, in the terms that matter here; Glossary
+Cited in: Redbelly's profile; Glossary
 
 **S28. Eligibility on Redbelly (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -373,7 +373,7 @@ Quoted phrases checked on the live page:
 - "Eligibility criteria checks can be used to ensure that only users that can prove they meet the criteria can interact with a smart contract's functions."
 - "A developer will also need to determine which issuers they trust"
 
-Cited in: What a connection would take; What it could offer institutions; Credentials and assets across chains
+Cited in: The build list; What institutions would gain; Compliance across chains
 
 **S29. Business verification (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -383,7 +383,7 @@ Supports: Businesses prove they are incorporated to an accredited issuer.
 Quoted phrases checked on the live page:
 - "To be verified, businesses need to prove they are an incorporated entity to a network accredited issuer."
 
-Cited in: Redbelly, in the terms that matter here; What a connection would take
+Cited in: Redbelly's profile; The build list
 
 **S30. Redbelly Access (official access dApp)**  
 Redbelly Network, accessed 2026-10-25  
@@ -395,7 +395,7 @@ Quoted phrases checked on the live page:
 - "you will be offered the option to add more accounts which will be connected to your identity"
 - "you will be offered the option to create a Testnet account too"
 
-Cited in: Redbelly, in the terms that matter here; Account-level checks; Credentials and assets across chains
+Cited in: Redbelly's profile; Tests with an Overledger account; Compliance across chains
 
 **S31. Becoming a node operator (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -406,7 +406,7 @@ Quoted phrases checked on the live page:
 - "Node operators MUST have network access for 2 accounts"
 - "Submissions currently closed"
 
-Cited in: Redbelly, in the terms that matter here; Can Redbelly connect now?
+Cited in: Redbelly's profile; Door by door: can Redbelly get in today?
 
 **S32. Redbelly Network native currency (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -418,7 +418,7 @@ Quoted phrases checked on the live page:
 - "Ethereum mainnet* (Via Polymer)"
 - "To bring RBNT from a non-Redbelly chain to Redbelly, use Lucid Labs Bridge"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 ## Tokeniser
 
@@ -433,7 +433,7 @@ Quoted phrases checked on the live page:
 - "Every holder is verified and every transfer checked against the asset's rules, automatically."
 - "Our API and MCP let you integrate Tokeniser with your existing registry"
 
-Cited in: What it could offer institutions; Credentials and assets across chains
+Cited in: What institutions would gain; Compliance across chains
 
 **S40. Tokeniser technology**  
 Tokeniser Pty Ltd, accessed 2026-10-25  
@@ -445,7 +445,7 @@ Quoted phrases checked on the live page:
 - "Identity and the AI-native wallet. Verifiable credentials gate every holder"
 - "Full EVM compatibility gives connection to more than 150 networks out of the box, with permissioned or permissionless access as your mandate allows."
 
-Cited in: Credentials and assets across chains; Glossary
+Cited in: Compliance across chains; Glossary
 
 **S41. Tokeniser: Automated compliance**  
 Tokeniser Pty Ltd, accessed 2026-10-25  
@@ -455,7 +455,7 @@ Supports: Trades that fail an eligibility check do not proceed, and every check 
 Quoted phrases checked on the live page:
 - "Trades that fail a check do not proceed, and every check is logged."
 
-Cited in: Credentials and assets across chains
+Cited in: Compliance across chains
 
 **S42. Tokeniser: Secondary transfer**  
 Tokeniser Pty Ltd, accessed 2026-10-25  
@@ -465,7 +465,7 @@ Supports: Ownership and payment are exchanged in a single step between eligible 
 Quoted phrases checked on the live page:
 - "When two eligible investors agree to a transfer, ownership and payment are exchanged in a single step."
 
-Cited in: Credentials and assets across chains
+Cited in: Compliance across chains
 
 **S43. Tokeniser: Collateral mobility**  
 Tokeniser Pty Ltd, accessed 2026-10-25  
@@ -475,7 +475,7 @@ Supports: Units pledged as collateral remain locked until the loan is repaid; th
 Quoted phrases checked on the live page:
 - "You approve the lenders and set the terms. Investors pledge units as security, and the units remain locked until the loan is repaid."
 
-Cited in: Credentials and assets across chains
+Cited in: Compliance across chains
 
 ## Existing bridges and wrapped RBNT
 
@@ -488,7 +488,7 @@ Quoted phrases checked on the live page:
 - "Tokens on Redbelly Network that can be bridged to other chains via LayerZero, using Stargate, and vice versa."
 - "AUDF"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 **S34. Lucid Labs bridged tokens (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -499,7 +499,7 @@ Quoted phrases checked on the live page:
 - "Powered by Polymer and LayerZero."
 - "0xb45fFB51984d626Ee758b336C61Cf20990c6bF13"
 
-Cited in: Redbelly, in the terms that matter here; Credentials and assets across chains
+Cited in: Redbelly's profile; Compliance across chains
 
 **S35. Celer cBridge bridged tokens (Vine)**  
 Redbelly Network, accessed 2026-10-25  
@@ -510,7 +510,7 @@ Quoted phrases checked on the live page:
 - "RBNT bridges out from Redbelly to Ethereum and BNB Chain, not back."
 - "0x063a1D5BFEAb213c9c12f47b704fccf81D60983e"
 
-Cited in: Redbelly, in the terms that matter here; Credentials and assets across chains
+Cited in: Redbelly's profile; Compliance across chains
 
 **S36. Celer Announces cBridge Support for Redbelly**  
 Celer Network, 2025-08-01  
@@ -522,7 +522,7 @@ Quoted phrases checked on the live page:
 - "USDT, USDC, WBTC, ETH"
 - "Redbelly → Ethereum"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 **S37. Redbelly Network on X: Wrapped RBNT live on Ethereum Mainnet**  
 Redbelly Network, 2025-02-14  
@@ -533,7 +533,7 @@ Quoted phrases checked on the live page:
 - "Wrapped RBNT Token is now live on Ethereum Mainnet."
 - "0xb45ffb51984d626ee758b336c61cf20990c6bf13"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 **S38. Deployed Endpoints, Message Libraries, and Executors (LayerZero V2)**  
 LayerZero, accessed 2026-10-25  
@@ -543,7 +543,7 @@ Supports: Redbelly Mainnet (chain ID 151) is listed among LayerZero V2 deploymen
 Quoted phrases checked on the live page:
 - "Redbelly Mainnet"
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 ## Redbelly DAO community work
 
@@ -556,7 +556,7 @@ Quoted phrases checked on the live page:
 - "Secured by a 2-of-3 multisig relayer network."
 - "lock-and-mint bridge"
 
-Cited in: Redbelly, in the terms that matter here; Glossary
+Cited in: Redbelly's profile; Glossary
 
 **S45. Redbridge testnet demo (TASK-08)**  
 Redbelly DAO community, accessed 2026-10-25  
@@ -566,7 +566,7 @@ Supports: Live testnet demo: lock ETH on Sepolia and receive WETH.rb on Redbelly
 Quoted phrases checked on the live page:
 - "Lock ETH on Ethereum Sepolia and receive WETH.rb 1:1 on Redbelly Testnet."
 
-Cited in: Redbelly, in the terms that matter here
+Cited in: Redbelly's profile
 
 **S46. redbelly-testnet-bridge: article (TASK-08 community entry)**  
 Redbelly DAO community, accessed 2026-10-25  
@@ -577,7 +577,7 @@ Quoted phrases checked on the live page:
 - "Sender not authorised to write transactions"
 - "Mainnet and Testnet approvals are separate."
 
-Cited in: Redbelly, in the terms that matter here; What we tested ourselves
+Cited in: Redbelly's profile; Field tests without an account
 
 **S47. TASK-16 Unstick Your RBNT: Cross-Chain Recovery Playbook (winning entry archive)**  
 Redbelly DAO Community Task Board, accessed 2026-10-25  
@@ -587,7 +587,7 @@ Supports: Archived DAO playbook for recovering stuck cross-chain RBNT (the deliv
 Quoted phrases checked on the live page:
 - "Unstick Your RBNT: Cross-Chain Recovery Playbook"
 
-Cited in: Redbelly, in the terms that matter here; Credentials and assets across chains
+Cited in: Redbelly's profile; Compliance across chains
 
 **S48. TASK-29 brief: Quant Overledger and Redbelly Interoperability Research**  
 Redbelly DAO Community Task Board, accessed 2026-10-25  
@@ -598,7 +598,7 @@ Quoted phrases checked on the live page:
 - "Redbelly and Quant have no announced partnership or talks"
 - "Redbelly has not published an official position on bridging"
 
-Cited in: Read this first; Not possible yet, and unknown; What would change the answer
+Cited in: Before you read; Hard stops and open questions; What would change the answer
 
 ## Live checks run for this report
 
@@ -607,11 +607,11 @@ This report, scripts/probe.mjs, 2026-10-25
 evidence/live-checks.json  
 Supports: Results of 22 reproducible checks: chain IDs, supported methods, block tags, refusal of an unverified write, presence of common contracts, and Overledger endpoints that need an account.
 
-Cited in: The answer on one page; What we tested ourselves; Account-level checks; Can Redbelly connect now?; What a connection would take; Not possible yet, and unknown
+Cited in: The verdict in sixty seconds; Field tests without an account; Tests with an Overledger account; Door by door: can Redbelly get in today?; The build list; Hard stops and open questions
 
 **S50. Account-level checks through an Overledger account (this report)**  
 This report, scripts/overledger-account-probe.mjs, 2026-10-25  
 evidence/overledger-account-checks.json  
 Supports: Results of 5 checks made with an Overledger API key, stages 1: the live network list, and where run, a Redbelly Testnet node used through Overledger.
 
-Cited in: The answer on one page; Account-level checks; Can Redbelly connect now?; Not possible yet, and unknown
+Cited in: The verdict in sixty seconds; Tests with an Overledger account; Hard stops and open questions

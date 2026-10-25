@@ -112,7 +112,7 @@ ${body}
     <div>
       <img class="logo-dark" src="assets/brand/dao-logo-on-dark.png" alt="Redbelly DAO" width="56" height="40">
       <img class="logo-light" src="assets/brand/dao-logo-on-light.png" alt="Redbelly DAO" width="56" height="40">
-      <p>Feasibility research for the Redbelly DAO Community Task Board, TASK-29. Redbelly and Quant have no announced partnership or talks. No price talk, no investment advice.</p>
+      <p>TASK-29 submission, Redbelly DAO Community Task Board. No partnership or talks between Redbelly and Quant have been announced. No price talk, no investment advice.</p>
       <p class="verified-line">Last verified ${esc(T.SOURCE_CHECK_DATE)}: ${esc(T.SOURCE_COUNT)} links, ${esc(T.QUOTE_COUNT)} quoted phrases, ${esc(T.PROBE_COUNT)} live checks.</p>
     </div>
     <nav aria-label="Footer">${PAGES.map((p) => `<a href="${p.href}">${p.label}</a>`).join('')}</nav>
@@ -202,7 +202,7 @@ function renderReportWeb() {
     ${HERO_ART}
   </div>
 </section>
-<div class="notice-bar" style="margin-top:24px"><p><strong>No partnership, talks or plans.</strong> Redbelly and Quant have no announced partnership or talks. This is independent feasibility research, not news, and it contains no price talk or investment advice.</p></div>
+<div class="notice-bar" style="margin-top:24px"><p><strong>Research, not news.</strong> No partnership or talks between Redbelly and Quant have been announced, and nothing here implies any. No price talk, no investment advice.</p></div>
 <div class="layout">
   <aside class="toc" aria-label="Contents">
     <h2>Contents</h2>
@@ -255,7 +255,7 @@ function renderCommunity() {
   <p class="eyebrow">For the community</p>
   <h1>${esc(summary.meta.title)}</h1>
   <p class="lede">A plain language summary of the full report, ready to share. Every fact links to its source.</p>
-  <div class="panel panel-notice"><div class="panel-label"><span class="dot"></span>Notice</div><p>Feasibility research only. Redbelly and Quant have no announced partnership or talks. No price talk, no investment advice.</p></div>
+  <div class="panel panel-notice"><div class="panel-label"><span class="dot"></span>Notice</div><p>Research, not news. No partnership or talks between Redbelly and Quant have been announced. No price talk, no investment advice.</p></div>
   <div class="prose">${sumHtml}</div>
   <h2>Sources for this summary</h2>
   <ul class="prose">${refs}</ul>
@@ -265,9 +265,9 @@ function renderCommunity() {
   <h2>Share cards</h2>
   <p>1600 by 900 images for X, in the DAO brand, each carrying a dated "last verified" line.</p>
   <div class="cards">
-    <img src="assets/img/x-card-1.png" alt="Card: Could Redbelly plug into Quant's Overledger? Not connected today. A thin link looks possible on paper. Anything deeper needs Quant." loading="lazy" width="1600" height="900">
-    <img src="assets/img/x-card-2.png" alt="Card: four levels of connection, two untested, two not possible yet." loading="lazy" width="1600" height="900">
-    <img src="assets/img/x-card-3.png" alt="Card: compliance does not travel by default." loading="lazy" width="1600" height="900">
+    <img src="assets/img/x-card-1.png" alt="Card: no connection today, a minimal link is plausible, anything deeper needs Quant." loading="lazy" width="1600" height="900">
+    <img src="assets/img/x-card-2.png" alt="Card: the connection ladder, two rungs plausible, two only Quant can unlock." loading="lazy" width="1600" height="900">
+    <img src="assets/img/x-card-3.png" alt="Card: the rules stay on Redbelly." loading="lazy" width="1600" height="900">
   </div>
 </main>`;
   return layout({ title: 'Community summary: Overledger and Redbelly', description: 'Plain language summary and X thread for the Overledger and Redbelly feasibility research.', page: 'community.html', body, sourcesJson: true });
@@ -305,7 +305,7 @@ function renderSources() {
   <div class="src-tools"><input id="src-search" type="search" placeholder="Search sources, publishers or quoted phrases" aria-label="Search sources"><span id="src-count" class="mono">${sources.sources.length} shown</span></div>
   ${groups}
 </main>`;
-  return layout({ title: 'Source list: Overledger and Redbelly', description: 'Every source behind the Overledger and Redbelly feasibility report, with quoted phrases and check results.', page: 'sources.html', body });
+  return layout({ title: 'Source list: Overledger and Redbelly', description: 'All sources used in the Overledger and Redbelly study, with stored phrases and the latest check results.', page: 'sources.html', body });
 }
 
 // ---------- evidence page ----------
@@ -374,7 +374,7 @@ function renderPrint() {
   <p class="eyebrow">Feasibility research, Redbelly DAO Community Task Board, TASK-29</p>
   <h1>${esc(report.meta.title)}</h1>
   <p class="cover-sub">${esc(report.meta.subtitle)}.</p>
-  <div class="cover-notice"><b>No partnership, talks or plans.</b> Redbelly and Quant have no announced partnership or talks. This report is independent feasibility research built on public sources. It contains no price talk and no investment advice.</div>
+  <div class="cover-notice"><b>Research, not news.</b> No partnership or talks between Redbelly and Quant have been announced, and nothing in this study implies any. It relies on public sources only and contains no price talk or investment advice.</div>
   <dl class="cover-meta">
     <div><dt>Research cut-off</dt><dd>${esc(report.meta.cutoff)}</dd></div>
     <div><dt>Version</dt><dd>${esc(report.meta.version)}</dd></div>
@@ -456,7 +456,7 @@ for (const f of ['live-checks.json', 'source-check.json', 'overledger-account-ch
   try { copyFileSync(join(ROOT, 'evidence', f), join(SITE, 'evidence', f)); } catch {}
 }
 
-const reportMd = `# ${report.meta.title}\n\n*${report.meta.subtitle}.*\n\nFeasibility research for the Redbelly DAO Community Task Board, TASK-29. Research cut-off ${report.meta.cutoff}. Version ${report.meta.version}.\n\n${toMarkdown(report)}\n\n---\n\n${sourcesMarkdown().replace(/^# Source list/, '## Source list')}`;
+const reportMd = `# ${report.meta.title}\n\n*${report.meta.subtitle}.*\n\nTASK-29 submission, Redbelly DAO Community Task Board. Research cut-off ${report.meta.cutoff}. Version ${report.meta.version}.\n\n${toMarkdown(report)}\n\n---\n\n${sourcesMarkdown().replace(/^# Source list/, '## Source list')}`;
 const files = {
   'Overledger-Redbelly-Feasibility-Report.md': reportMd,
   'Community-Summary.md': summaryMarkdown(),

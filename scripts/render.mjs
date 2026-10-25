@@ -81,15 +81,15 @@ async function card(file, w, h, inner) {
   await page.screenshot({ path: join(SITE, 'assets/img', file) });
   await page.close();
 }
-await card('og.png', 1200, 630, `<div class="k">Feasibility research, TASK-29</div><h1>Could Redbelly connect to Quant's Overledger?</h1><p>What it would take, what it could offer institutions, and where compliance could break. Every claim sourced and re-checked.</p>`);
-await card('x-card-1.png', 1600, 900, `<div class="k">The short answer</div><h1>Could Redbelly plug into Quant's Overledger?</h1>
-  <div class="row"><div class="box"><span class="s"><i style="background:#EF5350"></i>TODAY</span><b>Not connected</b><span>NOT NAMED IN OVERLEDGER DOCS</span></div>
-  <div class="box"><span class="s"><i style="background:#FCD34D"></i>ON PAPER</span><b>A thin link looks possible</b><span>EVM SELF-SERVE ROUTE, UNTESTED</span></div>
-  <div class="box"><span class="s"><i style="background:#8fa1ad"></i>DEEPER</span><b>Needs Quant</b><span>SIGNING, WORKFLOWS, FUSION</span></div></div>`);
-await card('x-card-2.png', 1600, 900, `<div class="k">Four levels of connection</div><h1>Two untested. Two not possible yet.</h1>
-  <div class="row"><div class="box"><span class="s"><i style="background:#FCD34D"></i>LEVEL 1</span><b>Read</b><span>UNTESTED</span></div><div class="box"><span class="s"><i style="background:#FCD34D"></i>LEVEL 2</span><b>Pass-through</b><span>UNTESTED</span></div>
-  <div class="box"><span class="s"><i style="background:#EF5350"></i>LEVEL 3</span><b>Orchestrate</b><span>NOT POSSIBLE YET</span></div><div class="box"><span class="s"><i style="background:#EF5350"></i>LEVEL 4</span><b>Move</b><span>NOT POSSIBLE YET</span></div></div>`);
-await card('x-card-3.png', 1600, 900, `<div class="k">The big caveat</div><h1>Compliance does not travel by default.</h1><p>Receptor proofs and Tokeniser transfer rules are checked on Redbelly. A wrapped copy on another chain follows that chain's rules unless a connection is built to carry them.</p>
+await card('og.png', 1200, 630, `<div class="k">Feasibility research, TASK-29</div><h1>Could Redbelly connect to Quant's Overledger?</h1><p>Technical fit, the work involved, value for institutions and compliance risks. Every claim linked and re-checked.</p>`);
+await card('x-card-1.png', 1600, 900, `<div class="k">The verdict</div><h1>Redbelly and Quant's Overledger</h1>
+  <div class="row"><div class="box"><span class="s"><i style="background:#EF5350"></i>TODAY</span><b>No connection</b><span>ABSENT FROM THE LIVE LIST OF 59</span></div>
+  <div class="box"><span class="s"><i style="background:#FCD34D"></i>ON PAPER</span><b>A minimal link is plausible</b><span>SELF-SERVICE EVM ROUTE, NOT TESTED</span></div>
+  <div class="box"><span class="s"><i style="background:#8fa1ad"></i>DEEPER</span><b>Deeper needs Quant</b><span>CUSTODY, WORKFLOWS, FUSION</span></div></div>`);
+await card('x-card-2.png', 1600, 900, `<div class="k">The connection ladder</div><h1>Two rungs plausible. Two only Quant can unlock.</h1>
+  <div class="row"><div class="box"><span class="s"><i style="background:#FCD34D"></i>RUNG 1</span><b>Observe</b><span>NOT TESTED</span></div><div class="box"><span class="s"><i style="background:#FCD34D"></i>RUNG 2</span><b>Relay</b><span>NOT TESTED</span></div>
+  <div class="box"><span class="s"><i style="background:#EF5350"></i>RUNG 3</span><b>Automate</b><span>NOT AVAILABLE</span></div><div class="box"><span class="s"><i style="background:#EF5350"></i>RUNG 4</span><b>Transfer value</b><span>NOT AVAILABLE</span></div></div>`);
+await card('x-card-3.png', 1600, 900, `<div class="k">The main warning</div><h1>The rules stay on Redbelly.</h1><p>Receptor and Tokeniser enforce their checks on Redbelly. A copy on another chain obeys that chain instead, unless the link carries the checks across.</p>
   <div class="row"><div class="box"><span class="s"><i style="background:#86EFAC"></i>SAFEST PATTERN</span><b>Keep the asset on Redbelly. Move instructions, not tokens.</b></div></div>`);
 await browser.close();
 
@@ -195,7 +195,7 @@ children.push(
   new Paragraph({ spacing: { after: 120 }, children: [new TextRun({ text: 'FEASIBILITY RESEARCH, REDBELLY DAO COMMUNITY TASK BOARD, TASK-29', font: MONO, size: 16, bold: true, color: RED })] }),
   new Paragraph({ spacing: { before: 120, after: 200, line: 264, lineRule: LineRuleType.AUTO }, children: [new TextRun({ text: report.meta.title, font: FONT, bold: true, size: 52 })] }),
   new Paragraph({ spacing: { after: 300 }, children: [new TextRun({ text: report.meta.subtitle + '.', font: FONT, size: 26, color: '394853' })] }),
-  panel('notice', '**No partnership, talks or plans.** Redbelly and Quant have no announced partnership or talks. This report is independent feasibility research built on public sources. It contains no price talk and no investment advice.'),
+  panel('notice', '**Research, not news.** No partnership or talks between Redbelly and Quant have been announced, and nothing in this study implies any. It relies on public sources only and contains no price talk or investment advice.'),
   new Paragraph({ spacing: { before: 300, after: 60 }, children: [new TextRun({ text: `Research cut-off: ${report.meta.cutoff}. Version ${report.meta.version}.`, font: FONT, size: 20 })] }),
   new Paragraph({ spacing: { after: 60 }, children: [new TextRun({ text: `${T.SOURCE_COUNT} sources with ${T.QUOTE_COUNT} quoted phrases re-checked on ${T.SOURCE_CHECK_DATE}. ${T.PROBE_COUNT} live checks run ${T.PROBE_DATE}.`, font: FONT, size: 20 })] }),
   new Paragraph({ spacing: { after: 300 }, children: [new TextRun({ text: 'Labels: Confirmed (stated in a linked source), Analysis (our reasoning), Unknown (not answered by any public source).', font: FONT, size: 20, color: '394853' })] })
@@ -236,7 +236,7 @@ for (const g of sources.groups) {
 
 const doc = new Document({
   title: report.meta.title,
-  description: 'Feasibility research for the Redbelly DAO Community Task Board, TASK-29.',
+  description: 'TASK-29 submission, Redbelly DAO Community Task Board.',
   creator: 'TASK-29',
   lastModifiedBy: 'TASK-29',
   styles: {
